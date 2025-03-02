@@ -137,4 +137,6 @@ D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.pdb
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.genruntimeconfig.cache
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\ref\libraryManagementSystem.dll
-D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.CommonFroms.users.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.AdminDashBoardForm.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageUsersForm.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.sourcelink.json

@@ -1,4 +1,4 @@
-using libraryManagementSystem.Forms.CommonFroms;
+using libraryManagementSystem.Forms.Librarian;
 
 namespace libraryManagementSystem
 {
@@ -13,7 +13,7 @@ namespace libraryManagementSystem
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run();
+            Application.Run(new ManageUsersForm());
         }
     }
 }

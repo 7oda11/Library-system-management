@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace libraryManagementSystem.Models
 {
-    public enum UserRole { Librarian, Member }
+    public enum UserRole { Librarian=0, Member=1 }
     [Index(nameof(Username), IsUnique = true)]  
     [Index(nameof(Email), IsUnique = true)]    
     public class User
