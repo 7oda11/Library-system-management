@@ -17,10 +17,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Forms\CommonFroms\" />
-    <Folder Include="Forms\Librarian\" />
-    <Folder Include="Forms\Member\" />
-  </ItemGroup>
-
 </Project>
