@@ -17,4 +17,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Forms\CommonFroms\" />
+    <Folder Include="Forms\Member\" />
+  </ItemGroup>
+
 </Project>

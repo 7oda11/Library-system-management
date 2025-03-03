@@ -10,7 +10,16 @@
     <Compile Update="Forms\CommonFroms\ManageRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Librarian\AdminDashBoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Librarian\Librarian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Member\Member.cs">

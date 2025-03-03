@@ -15,6 +15,8 @@ namespace libraryManagementSystem.Models
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<BorrowingRecord> BorrowingRecords { get; set; }
         public virtual DbSet<Log> Logs { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
            // optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data Source=.\\DEV;Initial Catalog=LibraryDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
