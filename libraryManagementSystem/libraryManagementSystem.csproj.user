@@ -22,7 +22,19 @@
     <Compile Update="Forms\Librarian\ManageUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Member\BorrowedBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\HomePageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Member\Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\ViewBooksForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
