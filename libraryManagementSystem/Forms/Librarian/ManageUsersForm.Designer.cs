@@ -46,6 +46,7 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
+            btn_back = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_users).BeginInit();
             SuspendLayout();
             // 
@@ -210,11 +211,22 @@
             label6.TabIndex = 17;
             label6.Text = "Phone";
             // 
+            // btn_back
+            // 
+            btn_back.Location = new Point(892, 12);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(94, 29);
+            btn_back.TabIndex = 18;
+            btn_back.Text = "Back";
+            btn_back.UseVisualStyleBackColor = true;
+            btn_back.Click += btn_back_Click;
+            // 
             // ManageUsersForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(998, 577);
+            Controls.Add(btn_back);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -261,5 +273,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private Button btn_back;
     }
 }

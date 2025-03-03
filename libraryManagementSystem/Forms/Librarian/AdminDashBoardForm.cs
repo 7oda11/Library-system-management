@@ -23,5 +23,12 @@ namespace libraryManagementSystem.Forms.Librarian
             frm.Show();
             this.Hide();
         }
+
+        private void btn_manageBooks_Click(object sender, EventArgs e)
+        {
+            ManageBooksForm frm = new ManageBooksForm();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

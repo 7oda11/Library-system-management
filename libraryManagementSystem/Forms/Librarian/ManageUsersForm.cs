@@ -27,7 +27,7 @@ namespace libraryManagementSystem.Forms.Librarian
         }
         private void loadData()
         {
-                var roles = new List<KeyValuePair<int, string>>()
+            var roles = new List<KeyValuePair<int, string>>()
             {
                 new KeyValuePair<int, string>(0, "Librarian"),
                 new KeyValuePair<int, string>(1, "Member")
@@ -138,11 +138,10 @@ namespace libraryManagementSystem.Forms.Librarian
             txt_email.Clear();
             txt_password.Clear();
             txt_confirmPassword.Clear();
-            cb_role.SelectedIndex = -1; // Reset ComboBox
+            cb_role.SelectedIndex = -1; 
             ck_showPassword.Checked = false;
             ck_showConfirmPassword.Checked = false;
         }
-
         private void ck_showPassword_CheckedChanged(object sender, EventArgs e)
         {
             txt_password.UseSystemPasswordChar = !ck_showPassword.Checked;
@@ -153,7 +152,6 @@ namespace libraryManagementSystem.Forms.Librarian
         {
             txt_confirmPassword.UseSystemPasswordChar = !ck_showConfirmPassword.Checked;
         }
-
         int userId;
         private void dgv_users_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -165,7 +163,7 @@ namespace libraryManagementSystem.Forms.Librarian
                 txt_phone.Text = row.Cells["PhoneNumber"].Value.ToString();
                 txt_email.Text = row.Cells["Email"].Value.ToString();
                 cb_role.SelectedValue = Convert.ToInt32(row.Cells["Role"].Value);
-                MessageBox.Show($"Assigned Role: {userId}");
+                //MessageBox.Show($"Assigned Role: {userId}");
                 btn_add.Hide();
                 btn_update.Show();
                 btn_delete.Show();
@@ -210,7 +208,7 @@ namespace libraryManagementSystem.Forms.Librarian
 
             DialogResult result = MessageBox.Show("Are you sure you want to delete this user?", "Confirm Deletion",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result==DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 if (UserService.deleteUser(userId))
                 {
@@ -219,6 +217,13 @@ namespace libraryManagementSystem.Forms.Librarian
                     ClearInputs();
                 }
             }
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            AdminDashBoardForm dashboardForm = new AdminDashBoardForm();
+            dashboardForm.Show();
+            this.Hide();
         }
     }
 }

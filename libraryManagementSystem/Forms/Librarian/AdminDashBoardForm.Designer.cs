@@ -43,6 +43,7 @@
             btn_manageBooks.TabIndex = 1;
             btn_manageBooks.Text = "Manage Books";
             btn_manageBooks.UseVisualStyleBackColor = true;
+            btn_manageBooks.Click += btn_manageBooks_Click;
             // 
             // btn_manageUsers
             // 

@@ -32,7 +32,6 @@ namespace libraryManagementSystem.Models
         [Phone]
         public string PhoneNumber { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-        [InverseProperty("User")]
         public virtual List<BorrowingRecord> BorrowingRecords { get; set; } = new List<BorrowingRecord>();
         public virtual List<Log> Logs { get; set; } = new List<Log>();
     }
