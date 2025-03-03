@@ -1,4 +1,5 @@
-﻿using libraryManagementSystem.Models;
+﻿using libraryManagementSystem.Forms.Librarian;
+using libraryManagementSystem.Models;
 using libraryManagementSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -47,9 +48,13 @@ namespace libraryManagementSystem.Forms.CommonFroms
 
                 if (user.Role == UserRole.Librarian)
                 {
-                    Librarian.Librarian adminForm = new Librarian.Librarian(user.UserId);
+                    AdminDashBoardForm adminDashBoardForm = new AdminDashBoardForm();
+                    adminDashBoardForm.Show();
                     this.Hide();
-                    adminForm.Show();
+                    //Librarian.Librarian adminForm = new Librarian.Librarian(user.UserId);
+                    //this.Hide();
+                    //adminForm.Show();
+                    
                 }
                 else if (user.Role == UserRole.Member)
                 {
