@@ -20,11 +20,19 @@ namespace libraryManagementSystem.Models
         public string Author { get; set; }
         [Required, StringLength(20)]
         public string ISBN { get; set; }
-        public string Category { get; set; }
         public int PublishedYear { get; set; }
         public int Quantity { get; set; } // Stock
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         [InverseProperty("Book")]
         public virtual List<BorrowingRecord> BorrowingRecords { get; set; } = new List<BorrowingRecord>();
+
+        [ForeignKey("Category")]
+        public int CategoryId { get; set; }
+
+        public virtual Category Category { get; set; }
+        public override string ToString()
+        {
+            return $"{Category.Name}";
+        }
     }
 }
