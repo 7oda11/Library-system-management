@@ -15,12 +15,14 @@ namespace libraryManagementSystem.Services
         public UserService()
         {
             _context = new LibraryDbContext();
+          //  EncryptUnhashedPasswords();
         }
 
         public List<User> GetAllUsers()
         {
             return _context.Users.ToList();
         }
+
 
         public User Login(string username, string password)
         {
@@ -40,27 +42,6 @@ namespace libraryManagementSystem.Services
         public string Register(string username, string password, string confirmPassword, string email, string phoneNumber, UserRole role)
         {
 
-
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(email))
-            {
-                return "Username, password, and email are required!";
-            }
-
-            if (password != confirmPassword)
-            {
-                return "Passwords do not match!";
-            }
-
-            if (_context.Users.Any(u => u.Username == username))
-            {
-                return "Username already exists!";
-            }
-
-            if (_context.Users.Any(u => u.Email == email))
-            {
-                return "Email is already in use!";
-            }
-
             var newUser = new User
             {
                 Username = username,
@@ -75,7 +56,6 @@ namespace libraryManagementSystem.Services
             _context.SaveChanges();
 
             return "User registered successfully!";
-
         }
 
 
@@ -89,7 +69,32 @@ namespace libraryManagementSystem.Services
                 return Convert.ToBase64String(bytes);
             }
         }
-        
+
+
+        public bool IsUsernameTaken(string username)
+        {
+            return _context.Users.Any(u => u.Username == username);
+        }
+
+        public bool IsEmailTaken(string email)
+        {
+            return _context.Users.Any(u => u.Email == email);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public static LibraryDbContext LibraryDbContext=new LibraryDbContext();
         public static User user = new User()
         {

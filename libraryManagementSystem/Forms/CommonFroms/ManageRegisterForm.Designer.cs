@@ -178,6 +178,7 @@
             Controls.Add(txtUsername);
             Name = "ManageRegisterForm";
             Text = "ManageRegisterForm";
+            Load += ManageRegisterForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

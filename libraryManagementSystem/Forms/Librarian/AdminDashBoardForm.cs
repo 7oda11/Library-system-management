@@ -30,5 +30,10 @@ namespace libraryManagementSystem.Forms.Librarian
             frm.Show();
             this.Hide();
         }
+
+        private void AdminDashBoardForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

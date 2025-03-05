@@ -25,32 +25,32 @@ namespace libraryManagementSystem.Forms.Member
 
         private void LoadUserProfile()
         {
-            using (var dbContext = new LibraryDbContext())
-            {
-                var user = dbContext.Users.Find(userId);
-                if (user != null)
-                {
-                    txtUsername.Text = user.Username;
-                    txtEmail.Text = user.Email;
-                    txtPhone.Text = user.PhoneNumber;
-                }
-            }
+            //using (var dbContext = new LibraryDbContext())
+            //{
+            //    var user = dbContext.Users.Find(userId);
+            //    if (user != null)
+            //    {
+            //        txtUsername.Text = user.Username;
+            //        txtEmail.Text = user.Email;
+            //        txtPhone.Text = user.PhoneNumber;
+            //    }
+            //}
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            using (var dbContext = new LibraryDbContext())
-            {
-                var user = dbContext.Users.Find(userId);
-                if (user != null)
-                {
-                    user.Email = txtEmail.Text;
-                    user.PhoneNumber = txtPhone.Text;
+            //using (var dbContext = new LibraryDbContext())
+            //{
+            //    var user = dbContext.Users.Find(userId);
+            //    if (user != null)
+            //    {
+            //        user.Email = txtEmail.Text;
+            //        user.PhoneNumber = txtPhone.Text;
 
-                    dbContext.SaveChanges();
-                    MessageBox.Show("Updated Successfully!");
-                }
-            }
+            //        dbContext.SaveChanges();
+            //        MessageBox.Show("Updated Successfully!");
+            //    }
+            //}
         }
     }
 }
