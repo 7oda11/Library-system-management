@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using libraryManagementSystem.Models;
+using libraryManagementSystem.Services;
 
 namespace libraryManagementSystem.Forms.Member
 {
@@ -24,16 +25,10 @@ namespace libraryManagementSystem.Forms.Member
         }
 
         private void LoadBorrowedBooks()
-        {
-            //using (var dbContext = new LibraryDbContext())
-            //{
-            //    var borrowedBooks = dbContext.BorrowingRecords
-            //        .Where(b => b.UserId == userId)
-            //        .Select(b => new { b.Book.Title, b.BorrowDate, b.DueDate })
-            //        .ToList();
+        { 
 
-            //    dgvBorrowedBooks.DataSource = borrowedBooks;
-            //}
+                dgvBorrowedBooks.DataSource = BorrowService.onBorrowRecord();
+            
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
