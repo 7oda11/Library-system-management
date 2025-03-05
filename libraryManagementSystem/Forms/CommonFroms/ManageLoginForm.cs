@@ -58,6 +58,7 @@ namespace libraryManagementSystem.Forms.CommonFroms
                 }
                 else if (user.Role == UserRole.Member)
                 {
+                    UserService.assignUserData(user);
                     Member.Member member = new Member.Member(user.UserId);
                     this.Hide();
                     member.Show();
