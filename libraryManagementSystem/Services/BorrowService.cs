@@ -12,20 +12,15 @@ namespace libraryManagementSystem.Services
     {
         public static LibraryDbContext dbContext = new LibraryDbContext();
 
-        public static List<object> onBorrowRecord()
+        public static List<BorrowingRecord> onBorrowRecord()
         {
-            var borrowedBooks = dbContext.BorrowingRecords
+            List<BorrowingRecord> borrowedBooks = dbContext.BorrowingRecords
                 .Where(b => b.UserId == UserService.CurrentUser.UserId)
-                //.Select(b => new
-                //{
-                //    Title = b.Book.Title,
-                //    BorrowDate = b.BorrowDate,
-                //    DueDate = b.DueDate
-                //})
                 .ToList();
 
-            return borrowedBooks.Cast<object>().ToList();
+            return borrowedBooks;
         }
+        
     }
    
 }

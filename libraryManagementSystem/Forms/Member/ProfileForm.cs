@@ -48,10 +48,12 @@ namespace libraryManagementSystem.Forms.Member
                     user.Email = txtEmail.Text;
                     user.PhoneNumber = txtPhone.Text;
 
-            //        dbContext.SaveChanges();
-            //        MessageBox.Show("Updated Successfully!");
-            //    }
-            //}
+                    //        dbContext.SaveChanges();
+                    //        MessageBox.Show("Updated Successfully!");
+                    //    }
+                    //}
+                }
+            }
         }
     }
 }

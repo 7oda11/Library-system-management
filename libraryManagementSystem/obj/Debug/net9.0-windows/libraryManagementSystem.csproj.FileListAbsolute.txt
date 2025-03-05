@@ -298,3 +298,7 @@ D:\iti\linq\New folder (2)\Library-system-management\libraryManagementSystem\bin
 D:\iti\linq\New folder (2)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryM.697EA730.Up2Date
 D:\iti\linq\New folder (2)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.genruntimeconfig.cache
 D:\iti\linq\New folder (2)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\ref\libraryManagementSystem.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.BorrowedBooksForm.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.HomePageForm.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.ProfileForm.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.ViewBooksForm.resources
