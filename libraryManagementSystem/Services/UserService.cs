@@ -12,6 +12,7 @@ namespace libraryManagementSystem.Services
     {
         private readonly LibraryDbContext _context;
 
+        public static User CurrentUser { get; private set; }
         public UserService()
         {
             _context = new LibraryDbContext();
@@ -30,6 +31,7 @@ namespace libraryManagementSystem.Services
        
             if (user != null && user.PasswordHash == HashPassword(password))
             {
+                CurrentUser = user;
                 return user; 
             }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using libraryManagementSystem.Models;
+using libraryManagementSystem.Services;
 
 namespace libraryManagementSystem.Forms.Member
 {
@@ -27,7 +28,7 @@ namespace libraryManagementSystem.Forms.Member
         {
             using (var dbContext = new LibraryDbContext())
             {
-                var user = dbContext.Users.Find(userId);
+                var user = dbContext.Users.Find(UserService.CurrentUser.UserId);
                 if (user != null)
                 {
                     txtUsername.Text = user.Username;
@@ -41,7 +42,7 @@ namespace libraryManagementSystem.Forms.Member
         {
             using (var dbContext = new LibraryDbContext())
             {
-                var user = dbContext.Users.Find(userId);
+                var user = dbContext.Users.Find(UserService.CurrentUser.UserId);
                 if (user != null)
                 {
                     user.Email = txtEmail.Text;

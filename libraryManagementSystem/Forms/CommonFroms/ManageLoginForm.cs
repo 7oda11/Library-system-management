@@ -1,4 +1,5 @@
 ﻿using libraryManagementSystem.Forms.Librarian;
+using libraryManagementSystem.Forms.Member;
 using libraryManagementSystem.Models;
 using libraryManagementSystem.Services;
 using System;
@@ -61,7 +62,9 @@ namespace libraryManagementSystem.Forms.CommonFroms
                     UserService.assignUserData(user);
                     Member.Member member = new Member.Member(user.UserId);
                     this.Hide();
-                    member.Show();
+                    //member.Show();
+                    HomePageForm homePageForm = new HomePageForm();
+                    homePageForm.Show();
                 }
             }
 
