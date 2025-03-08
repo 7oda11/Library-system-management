@@ -35,5 +35,12 @@ namespace libraryManagementSystem.Forms.Librarian
         {
 
         }
+
+        private void btn_manageProfile_Click(object sender, EventArgs e)
+        {
+            ManageLibrarianProfile frm = new ManageLibrarianProfile();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

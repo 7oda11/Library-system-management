@@ -302,3 +302,5 @@ D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.HomePageForm.resources
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.ProfileForm.resources
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.ViewBooksForm.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageLibrarianProfile.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageLibrarianChangePassword.resources
