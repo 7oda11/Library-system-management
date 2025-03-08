@@ -34,5 +34,9 @@ namespace libraryManagementSystem.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public virtual List<BorrowingRecord> BorrowingRecords { get; set; } = new List<BorrowingRecord>();
         public virtual List<Log> Logs { get; set; } = new List<Log>();
+        public override string ToString()
+        {
+            return $"{Username}";
+        }
     }
 }

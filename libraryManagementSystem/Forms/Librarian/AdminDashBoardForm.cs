@@ -42,5 +42,12 @@ namespace libraryManagementSystem.Forms.Librarian
             frm.Show();
             this.Hide();
         }
+
+        private void btn_viewLogs_Click(object sender, EventArgs e)
+        {
+            ManageLogs manageLogs = new ManageLogs();   
+            manageLogs.Show();
+            this.Hide();
+        }
     }
 }

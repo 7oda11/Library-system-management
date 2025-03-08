@@ -63,6 +63,7 @@
             btn_viewLogs.TabIndex = 3;
             btn_viewLogs.Text = "View Logs";
             btn_viewLogs.UseVisualStyleBackColor = true;
+            btn_viewLogs.Click += btn_viewLogs_Click;
             // 
             // btn_generateReports
             // 
