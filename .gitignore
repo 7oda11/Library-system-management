@@ -1,7 +1,15 @@
+# Ignore VS folders
 .vs/
+*.suo
+*.user
+*.cache
+
+# Ignore compiled binaries
+bin/
+obj/
+
+# Ignore credentials
 credentials.json
 libraryManagementSystem/bin/
-echo "libraryManagementSystem/bin/Debug/net9.0-windows/credentials.json" >> .gitignore
-
-
-
+libraryManagementSystem/bin/Debug/
+libraryManagementSystem/bin/Debug/net9.0-windows/
