@@ -1,1 +1,7 @@
 .vs/
+credentials.json
+libraryManagementSystem/bin/
+echo "libraryManagementSystem/bin/Debug/net9.0-windows/credentials.json" >> .gitignore
+
+
+
