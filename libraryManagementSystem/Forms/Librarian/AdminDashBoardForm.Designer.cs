@@ -76,6 +76,7 @@
             btn_generateReports.TabIndex = 4;
             btn_generateReports.Text = "Generate Reports";
             btn_generateReports.UseVisualStyleBackColor = true;
+            btn_generateReports.Click += btn_generateReports_Click;
             // 
             // btn_manageProfile
             // 

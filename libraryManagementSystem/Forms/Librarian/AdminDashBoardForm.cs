@@ -35,5 +35,12 @@ namespace libraryManagementSystem.Forms.Librarian
         {
 
         }
+
+        private void btn_generateReports_Click(object sender, EventArgs e)
+        {
+            ManageReportsForm manageReportsForm = new ManageReportsForm();
+            manageReportsForm.Show();
+            this.Hide();
+        }
     }
 }

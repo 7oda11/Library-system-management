@@ -39,6 +39,12 @@ namespace libraryManagementSystem.Forms.CommonFroms
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Username and password cannot be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
 
 
             var user = _userService.Login(username, password);
@@ -52,17 +58,14 @@ namespace libraryManagementSystem.Forms.CommonFroms
                     AdminDashBoardForm adminDashBoardForm = new AdminDashBoardForm();
                     adminDashBoardForm.Show();
                     this.Hide();
-                    //Librarian.Librarian adminForm = new Librarian.Librarian(user.UserId);
-                    //this.Hide();
-                    //adminForm.Show();
+                   
                     
                 }
                 else if (user.Role == UserRole.Member)
                 {
-                    //UserService.assignUserData(user);
+                    
                     Member.Member member = new Member.Member(user.UserId);
                     this.Hide();
-                    //member.Show();
                     HomePageForm homePageForm = new HomePageForm();
                     homePageForm.Show();
                 }
