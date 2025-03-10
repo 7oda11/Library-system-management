@@ -39,7 +39,7 @@ namespace libraryManagementSystem.Forms.Librarian
         private void btnborrowedbooks_Click(object sender, EventArgs e)
         {
 
-            ManageBorrowedBooks frm = new ManageBorrowedBooks();
+            ReportBorrowedBooks frm = new ReportBorrowedBooks();
             frm.ShowDialog();
         }
 
@@ -49,7 +49,7 @@ namespace libraryManagementSystem.Forms.Librarian
 
         private void btnoverduebooks_Click(object sender, EventArgs e)
         {
-            ManageOverdueBooks frm = new ManageOverdueBooks();
+            ReportOverdueBooks frm = new ReportOverdueBooks();
             frm.ShowDialog();
 
            

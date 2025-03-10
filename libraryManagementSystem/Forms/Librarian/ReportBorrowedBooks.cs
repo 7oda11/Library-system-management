@@ -1,5 +1,6 @@
 ﻿using ClosedXML.Excel;
 using FastMember;
+using libraryManagementSystem.Models;
 using libraryManagementSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -14,18 +15,20 @@ using System.Windows.Forms;
 
 namespace libraryManagementSystem.Forms.Librarian
 {
-    public partial class ManageOverdueBooks : Form
+    public partial class ReportBorrowedBooks : Form
     {
-        public ManageOverdueBooks()
+       // public static List<BorrowingRecord> booksList;
+        public ReportBorrowedBooks()
         {
             InitializeComponent();
+            
         }
 
-        private void btnoverduebooks_Click(object sender, EventArgs e)
+        private void btnborrowedbooks_Click(object sender, EventArgs e)
         {
             try
             {
-                var booksList = ReportService.GetOverdueBooks().Select(b => new
+                var booksList = ReportService.GetBorrowedBooks().Select(b => new
                 {
                     b.BorrowingId,
                     b.UserId,
@@ -35,14 +38,11 @@ namespace libraryManagementSystem.Forms.Librarian
                     b.DueDate,
                     b.Status
                 }).ToList();
-
-       
-
                 using (SaveFileDialog saveFileDialog = new SaveFileDialog())
                 {
                     saveFileDialog.Filter = "Excel Files|*.xlsx";
                     saveFileDialog.Title = "Save Excel File";
-                    saveFileDialog.FileName = "OverdueBooksReport.xlsx";
+                    saveFileDialog.FileName = "BorrowedBooksReport.xlsx";
 
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
@@ -79,9 +79,9 @@ namespace libraryManagementSystem.Forms.Librarian
 
         }
 
-        private void ManageOverdueBooks_Load(object sender, EventArgs e)
+        private void ManageBorrowedBooks_Load(object sender, EventArgs e)
         {
-            var booksList = ReportService.GetOverdueBooks().Select(b => new
+            var booksList = ReportService.GetBorrowedBooks().Select(b => new
             {
                 b.BorrowingId,
                 b.UserId,
@@ -91,9 +91,7 @@ namespace libraryManagementSystem.Forms.Librarian
                 b.DueDate,
                 b.Status
             }).ToList();
-
             dataGridView1.DataSource = booksList;
-
         }
     }
 }

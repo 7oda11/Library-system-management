@@ -465,5 +465,5 @@ D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\obj
 D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.genruntimeconfig.cache
 D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\ref\libraryManagementSystem.dll
 D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageAvaliableBooks.resources
-D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageBorrowedBooks.resources
-D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageOverdueBooks.resources
+D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ReportBorrowedBooks.resources
+D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ReportOverdueBooks.resources

@@ -1,6 +1,6 @@
 ﻿namespace libraryManagementSystem.Forms.Librarian
 {
-    partial class ManageBorrowedBooks
+    partial class ReportOverdueBooks
     {
         /// <summary>
         /// Required designer variable.
@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnoverduebooks = new Button();
             dataGridView1 = new DataGridView();
-            btnborrowedbooks = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // btnoverduebooks
+            // 
+            btnoverduebooks.Location = new Point(257, 73);
+            btnoverduebooks.Name = "btnoverduebooks";
+            btnoverduebooks.Size = new Size(149, 41);
+            btnoverduebooks.TabIndex = 5;
+            btnoverduebooks.Text = "Generate_Report";
+            btnoverduebooks.UseVisualStyleBackColor = true;
+            btnoverduebooks.Click += btnoverduebooks_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 268);
+            dataGridView1.Location = new Point(-2, 259);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(711, 180);
-            dataGridView1.TabIndex = 0;
+            dataGridView1.Size = new Size(713, 189);
+            dataGridView1.TabIndex = 6;
             // 
-            // btnborrowedbooks
-            // 
-            btnborrowedbooks.Location = new Point(264, 59);
-            btnborrowedbooks.Name = "btnborrowedbooks";
-            btnborrowedbooks.Size = new Size(149, 52);
-            btnborrowedbooks.TabIndex = 4;
-            btnborrowedbooks.Text = "Generate_Report";
-            btnborrowedbooks.UseVisualStyleBackColor = true;
-            btnborrowedbooks.Click += btnborrowedbooks_Click;
-            // 
-            // ManageBorrowedBooks
+            // ManageOverdueBooks
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnborrowedbooks);
             Controls.Add(dataGridView1);
-            Name = "ManageBorrowedBooks";
-            Text = "ManageBorrowedBooks";
-            Load += ManageBorrowedBooks_Load;
+            Controls.Add(btnoverduebooks);
+            Name = "ManageOverdueBooks";
+            Text = "ManageOverdueBooks";
+            Load += ManageOverdueBooks_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
+        private Button btnoverduebooks;
         private DataGridView dataGridView1;
-        private Button btnborrowedbooks;
     }
 }
