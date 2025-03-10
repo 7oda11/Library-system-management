@@ -48,7 +48,7 @@ namespace libraryManagementSystem.Services
             }
             return true;
         }
-        public static Book GetBook(int id)
+        public static Book? GetBook(int id)
         {
             return LibraryDbContext.Books.Where(b => b.BookId == id).FirstOrDefault();
         }
@@ -67,7 +67,7 @@ namespace libraryManagementSystem.Services
         }
         public static bool deleteBook(int id) 
         {
-            Book book=LibraryDbContext.Books.Where(b=>b.BookId==id).FirstOrDefault();
+            Book? book=LibraryDbContext.Books.Where(b=>b.BookId==id).FirstOrDefault();
             if (book == null)
             {
                 MessageBox.Show("Nook not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -78,6 +78,32 @@ namespace libraryManagementSystem.Services
             LibraryDbContext.SaveChanges();
             return true;
         }
+        public static void updateBookQuantity(int bookId, int newQuantity)
+        {
+            using (var db = new LibraryDbContext())
+            {
+                var book = db.Books.FirstOrDefault(b => b.BookId == bookId);
+                if (book != null)
+                {
+                    book.Quantity = newQuantity;
+                    db.SaveChanges();
+                }
+            }
+        }
+
+        public static void IncreaseStock(int bookId)
+        {
+            using (var db = new LibraryDbContext())
+            {
+                var book = db.Books.FirstOrDefault(b => b.BookId == bookId);
+                if (book != null)
+                {
+                    book.Quantity += 1;
+                    db.SaveChanges();
+                }
+            }
+        }
+
     }
-    
+
 }

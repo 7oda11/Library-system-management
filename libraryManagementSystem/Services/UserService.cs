@@ -12,7 +12,7 @@ namespace libraryManagementSystem.Services
     {
         private readonly LibraryDbContext _context;
 
-        public static User CurrentUser { get; private set; }
+        public static User CurrentUser { get; private set; } = new User();
         public UserService()
         {
             _context = new LibraryDbContext();
@@ -25,7 +25,7 @@ namespace libraryManagementSystem.Services
         }
 
 
-        public User Login(string username, string password)
+        public User? Login(string username, string password)
         {
             
             var user = _context.Users.FirstOrDefault(u => u.Username == username);
@@ -183,7 +183,7 @@ namespace libraryManagementSystem.Services
                 return true;
             }
         }
-        public static User getUserById(int id)
+        public static User? getUserById(int id)
         {
             return LibraryDbContext.Users.Where(u=>u.UserId==id).FirstOrDefault();
         }
@@ -212,7 +212,7 @@ namespace libraryManagementSystem.Services
         }
         public static bool deleteUser(int id)
         {
-            User user = LibraryDbContext.Users.FirstOrDefault(u => u.UserId == id);
+            User? user = LibraryDbContext.Users.FirstOrDefault(u => u.UserId == id);
             if (user == null)
             {
                 MessageBox.Show("User not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
