@@ -308,3 +308,10 @@ D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageLogs.resources
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageReturnedBooks.resources
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageUserAcion.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Google.Apis.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Google.Apis.Auth.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Google.Apis.Core.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Google.Apis.Gmail.v1.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Newtonsoft.Json.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\System.Management.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\runtimes\win\lib\net7.0\System.Management.dll
