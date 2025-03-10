@@ -13,11 +13,11 @@ namespace libraryManagementSystem.Models
         [Key]
         public int LogId { get; set; }
         [Required]
-        public string Action { get; set; }
+        public string Action { get; set; }=string.Empty;
         [Required]
         public int UserId { get; set; }
         [ForeignKey("UserId")]
-        public virtual User User { get; set; } 
+        public virtual User User { get; set; } =new User();
         public DateTime PerformedAt { get; set; } = DateTime.Now;
     }
 }
