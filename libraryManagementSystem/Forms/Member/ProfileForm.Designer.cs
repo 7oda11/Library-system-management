@@ -36,6 +36,8 @@
             txtEmail = new TextBox();
             txtPhone = new TextBox();
             btnSave = new Button();
+            btnChangePassword = new Button();
+            btnCancel = new Button();
             SuspendLayout();
             // 
             // label1
@@ -102,19 +104,43 @@
             // btnSave
             // 
             btnSave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(96, 293);
+            btnSave.Location = new Point(74, 319);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(75, 30);
+            btnSave.Size = new Size(173, 33);
             btnSave.TabIndex = 7;
-            btnSave.Text = "Save";
+            btnSave.Text = "Save Changes";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
+            // 
+            // btnChangePassword
+            // 
+            btnChangePassword.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnChangePassword.Location = new Point(74, 258);
+            btnChangePassword.Name = "btnChangePassword";
+            btnChangePassword.Size = new Size(173, 37);
+            btnChangePassword.TabIndex = 8;
+            btnChangePassword.Text = "Change Password";
+            btnChangePassword.UseVisualStyleBackColor = true;
+            btnChangePassword.Click += btnChangePassword_Click;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancel.Location = new Point(307, 315);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(106, 37);
+            btnCancel.TabIndex = 9;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // ProfileForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnCancel);
+            Controls.Add(btnChangePassword);
             Controls.Add(btnSave);
             Controls.Add(txtPhone);
             Controls.Add(txtEmail);
@@ -140,5 +166,7 @@
         private TextBox txtEmail;
         private TextBox txtPhone;
         private Button btnSave;
+        private Button btnChangePassword;
+        private Button btnCancel;
     }
 }

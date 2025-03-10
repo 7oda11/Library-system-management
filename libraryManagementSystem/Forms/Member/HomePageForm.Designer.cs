@@ -32,6 +32,7 @@
             btnViewBooks = new Button();
             btnBorrowedBooks = new Button();
             btnManageProfile = new Button();
+            btnLogout = new Button();
             SuspendLayout();
             // 
             // label1
@@ -77,11 +78,23 @@
             btnManageProfile.UseVisualStyleBackColor = true;
             btnManageProfile.Click += btnManageProfile_Click;
             // 
+            // btnLogout
+            // 
+            btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.Location = new Point(671, 380);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(117, 40);
+            btnLogout.TabIndex = 4;
+            btnLogout.Text = "log out";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
+            // 
             // HomePageForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnLogout);
             Controls.Add(btnManageProfile);
             Controls.Add(btnBorrowedBooks);
             Controls.Add(btnViewBooks);
@@ -98,5 +111,6 @@
         private Button btnViewBooks;
         private Button btnBorrowedBooks;
         private Button btnManageProfile;
+        private Button btnLogout;
     }
 }

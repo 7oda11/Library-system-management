@@ -40,7 +40,13 @@
     <Compile Update="Forms\Librarian\ManageUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Member\BookDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Member\BorrowedBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Member\HomePageForm.cs">

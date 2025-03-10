@@ -31,6 +31,7 @@
             dgvBorrowedBooks = new DataGridView();
             btnRefresh = new Button();
             label1 = new Label();
+            btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvBorrowedBooks).BeginInit();
             SuspendLayout();
             // 
@@ -41,13 +42,14 @@
             dgvBorrowedBooks.Name = "dgvBorrowedBooks";
             dgvBorrowedBooks.Size = new Size(425, 223);
             dgvBorrowedBooks.TabIndex = 0;
+            dgvBorrowedBooks.RowHeaderMouseDoubleClick += dgvBorrowedBooks_RowHeaderMouseDoubleClick;
             // 
             // btnRefresh
             // 
             btnRefresh.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.Location = new Point(130, 351);
+            btnRefresh.Location = new Point(375, 328);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(159, 41);
+            btnRefresh.Size = new Size(75, 41);
             btnRefresh.TabIndex = 1;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
@@ -63,11 +65,23 @@
             label1.TabIndex = 2;
             label1.Text = "Borrowed Books";
             // 
+            // btnBack
+            // 
+            btnBack.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.Location = new Point(713, 384);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(75, 41);
+            btnBack.TabIndex = 3;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // BorrowedBooksForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBack);
             Controls.Add(label1);
             Controls.Add(btnRefresh);
             Controls.Add(dgvBorrowedBooks);
@@ -84,5 +98,6 @@
         private DataGridView dgvBorrowedBooks;
         private Button btnRefresh;
         private Label label1;
+        private Button btnBack;
     }
 }

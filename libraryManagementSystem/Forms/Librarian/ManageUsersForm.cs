@@ -57,7 +57,7 @@ namespace libraryManagementSystem.Forms.Librarian
                     PhoneNumber = phone,
                     Email = email,
                     PasswordHash = HashPassword(password),
-                    confirmPasswordHash = HashPassword(confirmPassword),
+                    ConfirmPasswordHash = HashPassword(confirmPassword),
                     Role = (UserRole)role,
                     CreatedAt = DateTime.Now
                 };
@@ -186,7 +186,7 @@ namespace libraryManagementSystem.Forms.Librarian
                 user.PhoneNumber = phone;
                 user.Email = email;
                 user.PasswordHash = HashPassword(password);
-                user.confirmPasswordHash = HashPassword(confirmPassword);
+                user.ConfirmPasswordHash = HashPassword(confirmPassword);
                 user.Role = (UserRole)role;
                 user.CreatedAt = DateTime.Now;
                 if (UserService.updateUser(user))

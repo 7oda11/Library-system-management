@@ -34,5 +34,10 @@ namespace libraryManagementSystem.Forms.Member
             ProfileForm profileForm = new ProfileForm();
             profileForm.Show();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
