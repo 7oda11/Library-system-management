@@ -1,0 +1,44 @@
+[33mda12dd9[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Merge branch 'main' of https://github.com/7oda11/Library-system-management
+[33mc4007c6[m Added credentials.json to .gitignore
+[33m30bb19c[m add features
+[33m888022b[m add features
+[33m4f928af[m some change in gmail services
+[33m37ffb83[m install gmail services
+[33ma6c0282[m Removed ignored files from Git tracking
+[33mc9b8266[m add email notification using gmail for due date borrowed books
+[33mf7384a6[m change
+[33mc9c48ac[m create and manage logs
+[33m7b39e83[m Create ManageAdminProfile and changePassword logic and design in the same stracture
+[33md488547[m some changes
+[33m57a182c[m merge common branch
+[33m88de583[m Merge branch 'common' of https://github.com/7oda11/Library-system-management
+[33mbb7d2e0[m Merge branch 'main' of https://github.com/7oda11/Library-system-management
+[33m174f882[m some changes
+[33m7d3fd05[m[33m ([m[1;31morigin/common[m[33m)[m Merge branch 'main' of https://github.com/7oda11/Library-system-management into common
+[33md2bfb41[m commonsss
+[33me32d4e1[m commit
+[33m1a582c4[m aaasss
+[33m4bb9e69[m Merge branch 'main' of https://github.com/7oda11/Library-system-management
+[33me752085[m aaa
+[33m49fb24f[m hhgh
+[33m09586a5[m Merge branch 'main' of https://github.com/7oda11/Library-system-management
+[33m85fd5ac[m hello
+[33m2189148[m solve some conflicts
+[33mc21d536[m Merge branch 'User' of https://github.com/7oda11/Library-system-management
+[33mfba86a8[m Merge branch 'main' of https://github.com/7oda11/Library-system-management
+[33m2550030[m merge conflicts
+[33mdb719df[m merge conflicts
+[33m4fc3e82[m Merge branch 'main' of https://github.com/7oda11/Library-system-management
+[33mfcc3377[m hello
+[33m53fc51a[m[33m ([m[1;31morigin/User[m[33m)[m user commit
+[33m82198a3[m Merge branch 'admin' of https://github.com/7oda11/Library-system-management
+[33mcdf0d8d[m merge common branch
+[33mf88221f[m Merge pull request #1 from 7oda11/common
+[33m7c379c7[m Register and Login
+[33m8891bca[m[33m ([m[1;31morigin/admin[m[33m)[m add manage book logic in a same stracture features(add,update,delete ) and handle a lot of exceptions
+[33mcebdf2a[m add all logic and design that is related to manage user form insert delete update i a good stracture and handling exceptions
+[33m5b7fa7c[m Merge branch 'main' of https://github.com/7oda11/Library-system-management into admin
+[33m7831f90[m Ignored Visual Studio folder
+[33md8507ec[m Ignored Visual Studio folder
+[33mace1c75[m add gitignore
+[33m65cd539[m initialize the basic stracture if the project like file and connection string
