@@ -315,3 +315,7 @@ D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Newtonsoft.Json.dll
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\System.Management.dll
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageReportsForm.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageAvaliableBooks.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ReportBorrowedBooks.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ReportOverdueBooks.resources
