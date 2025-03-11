@@ -100,7 +100,12 @@ namespace libraryManagementSystem.Forms.Member
 
 
 
-
+                Log log = new Log()
+                {
+                    UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
+                    Action = $"User Name {UserService.CurrentUser.Username} Update His Profile "
+                };
+                logService.AddLog(log);
                 dbContext.SaveChanges();
                 MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

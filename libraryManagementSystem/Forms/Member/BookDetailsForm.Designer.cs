@@ -45,18 +45,19 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(130, 25);
+            label1.Location = new Point(149, 33);
             label1.Name = "label1";
-            label1.Size = new Size(106, 21);
+            label1.Size = new Size(132, 28);
             label1.TabIndex = 0;
             label1.Text = "Book Details";
             // 
             // btnBorrow
             // 
             btnBorrow.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBorrow.Location = new Point(112, 176);
+            btnBorrow.Location = new Point(128, 235);
+            btnBorrow.Margin = new Padding(3, 4, 3, 4);
             btnBorrow.Name = "btnBorrow";
-            btnBorrow.Size = new Size(75, 36);
+            btnBorrow.Size = new Size(86, 48);
             btnBorrow.TabIndex = 1;
             btnBorrow.Text = "Borrow";
             btnBorrow.UseVisualStyleBackColor = true;
@@ -66,9 +67,9 @@
             // 
             lblCategory.AutoSize = true;
             lblCategory.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCategory.Location = new Point(346, 79);
+            lblCategory.Location = new Point(395, 105);
             lblCategory.Name = "lblCategory";
-            lblCategory.Size = new Size(57, 21);
+            lblCategory.Size = new Size(70, 28);
             lblCategory.TabIndex = 2;
             lblCategory.Text = "label2";
             // 
@@ -76,9 +77,9 @@
             // 
             lblAuthor.AutoSize = true;
             lblAuthor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAuthor.Location = new Point(130, 118);
+            lblAuthor.Location = new Point(149, 157);
             lblAuthor.Name = "lblAuthor";
-            lblAuthor.Size = new Size(57, 21);
+            lblAuthor.Size = new Size(70, 28);
             lblAuthor.TabIndex = 3;
             lblAuthor.Text = "label3";
             // 
@@ -86,9 +87,9 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(130, 79);
+            lblTitle.Location = new Point(149, 105);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(57, 21);
+            lblTitle.Size = new Size(70, 28);
             lblTitle.TabIndex = 4;
             lblTitle.Text = "label4";
             // 
@@ -96,18 +97,19 @@
             // 
             lblQuantity.AutoSize = true;
             lblQuantity.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblQuantity.Location = new Point(346, 118);
+            lblQuantity.Location = new Point(395, 157);
             lblQuantity.Name = "lblQuantity";
-            lblQuantity.Size = new Size(57, 21);
+            lblQuantity.Size = new Size(70, 28);
             lblQuantity.TabIndex = 5;
             lblQuantity.Text = "label5";
             // 
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(298, 176);
+            btnBack.Location = new Point(341, 235);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 36);
+            btnBack.Size = new Size(86, 48);
             btnBack.TabIndex = 6;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
@@ -117,9 +119,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(40, 79);
+            label2.Location = new Point(46, 105);
             label2.Name = "label2";
-            label2.Size = new Size(48, 21);
+            label2.Size = new Size(60, 28);
             label2.TabIndex = 7;
             label2.Text = "Title:";
             // 
@@ -127,9 +129,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(40, 118);
+            label3.Location = new Point(46, 157);
             label3.Name = "label3";
-            label3.Size = new Size(68, 21);
+            label3.Size = new Size(84, 28);
             label3.TabIndex = 8;
             label3.Text = "Author:";
             // 
@@ -137,9 +139,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(256, 79);
+            label4.Location = new Point(293, 105);
             label4.Name = "label4";
-            label4.Size = new Size(84, 21);
+            label4.Size = new Size(103, 28);
             label4.TabIndex = 9;
             label4.Text = "Category:";
             // 
@@ -147,17 +149,17 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(254, 118);
+            label5.Location = new Point(290, 157);
             label5.Name = "label5";
-            label5.Size = new Size(81, 21);
+            label5.Size = new Size(100, 28);
             label5.TabIndex = 10;
             label5.Text = "Quentity:";
             // 
             // BookDetailsForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -169,6 +171,7 @@
             Controls.Add(lblCategory);
             Controls.Add(btnBorrow);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "BookDetailsForm";
             Text = "BookDetailsForm";
             ResumeLayout(false);

@@ -50,6 +50,12 @@ namespace libraryManagementSystem.Forms.Librarian
                 if (BookService.addBook(newBook))
                 {
                     MessageBox.Show("Book added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Log log = new Log()
+                    {
+                        UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
+                        Action = $"Admin Name {UserService.CurrentUser.Username} Add Book {txt_title.Text}"
+                    };
+                    logService.AddLog(log);
                     ClearInputs();
                     loadData();
                 }
@@ -144,6 +150,12 @@ namespace libraryManagementSystem.Forms.Librarian
                     if (BookService.updateBook(bookToUpdate))
                     {
                         MessageBox.Show("Book updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Log log = new Log()
+                        {
+                            UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
+                            Action = $"Admin Name {UserService.CurrentUser.Username}   update Book {txt_title.Text}"
+                        };
+                        logService.AddLog(log);
                         ClearInputs();
                         loadData();
                     }
@@ -178,8 +190,15 @@ namespace libraryManagementSystem.Forms.Librarian
                         if (BookService.deleteBook(selectedBookId))
                         {
                             MessageBox.Show("Book deleted successfully!",               "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ClearInputs();
+                        Log log = new Log()
+                        {
+                            UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
+                            Action = $"Admin Name {UserService.CurrentUser.Username} Delete Book {txt_title.Text}"
+                        };
+                        logService.AddLog(log);
+                        ClearInputs();
                             loadData();
+
 
                         }
 

@@ -33,6 +33,7 @@
             btn_viewLogs = new Button();
             btn_generateReports = new Button();
             btn_manageProfile = new Button();
+            btn_returnedBooks = new Button();
             SuspendLayout();
             // 
             // btn_manageBooks
@@ -85,11 +86,22 @@
             btn_manageProfile.UseVisualStyleBackColor = true;
             btn_manageProfile.Click += btn_manageProfile_Click;
             // 
+            // btn_returnedBooks
+            // 
+            btn_returnedBooks.Location = new Point(261, 412);
+            btn_returnedBooks.Name = "btn_returnedBooks";
+            btn_returnedBooks.Size = new Size(237, 45);
+            btn_returnedBooks.TabIndex = 6;
+            btn_returnedBooks.Text = "Manage Returned Books";
+            btn_returnedBooks.UseVisualStyleBackColor = true;
+            btn_returnedBooks.Click += btn_returnedBooks_Click;
+            // 
             // AdminDashBoardForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 451);
+            ClientSize = new Size(800, 537);
+            Controls.Add(btn_returnedBooks);
             Controls.Add(btn_manageProfile);
             Controls.Add(btn_generateReports);
             Controls.Add(btn_viewLogs);
@@ -108,5 +120,6 @@
         private Button btn_viewLogs;
         private Button btn_generateReports;
         private Button btn_manageProfile;
+        private Button btn_returnedBooks;
     }
 }

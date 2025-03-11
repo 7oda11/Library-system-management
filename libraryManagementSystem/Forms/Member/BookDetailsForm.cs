@@ -53,8 +53,15 @@ namespace libraryManagementSystem.Forms.Member
                 BorrowService.addBorrowRecord(book.BookId, UserService.CurrentUser.UserId, DateTime.Now);
 
                 MessageBox.Show("Book borrowed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                Log log = new Log()
+                {
+                    UserId = UserService.CurrentUser.UserId,
+                    Action = "Book Borrowed: Book Name " + book.Title
+                };
+                MessageBox.Show(log.UserId.ToString());
+                logService.AddLog(log);
                 lblQuantity.Text = book.Quantity.ToString();
+                loadData();
 
                 //UpdateAllForms();
             }
@@ -81,6 +88,10 @@ namespace libraryManagementSystem.Forms.Member
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void loadData()
+        {
+            book = BookService.GetBook(book.BookId);
         }
     }
 

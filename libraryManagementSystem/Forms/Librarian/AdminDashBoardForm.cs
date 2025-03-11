@@ -54,5 +54,12 @@ namespace libraryManagementSystem.Forms.Librarian
             manageReportsForm.Show();
             this.Hide();
         }
+
+        private void btn_returnedBooks_Click(object sender, EventArgs e)
+        {
+            ManageReturnedUserBooksForm man=new ManageReturnedUserBooksForm();
+            man.Show();
+            this.Hide();
+        }
     }
 }

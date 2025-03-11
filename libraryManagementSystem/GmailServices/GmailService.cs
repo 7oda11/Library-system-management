@@ -9,9 +9,9 @@ using Google.Apis.Util.Store;
 
 namespace libraryManagementSystem.GmailServices
 {
-    public class GmailServices
+    public class GmailService
     {
-        string[] Scopes = { GmailService.Scope.GmailSend };
+        string[] Scopes = { Google.Apis.Gmail.v1.GmailService.Scope.GmailSend };
         string ApplicationName = "LibraryManagementSystem";
 
         // Method to encode the email content to Base64URL
@@ -103,7 +103,7 @@ namespace libraryManagementSystem.GmailServices
                              htmlContent;
 
             // Initialize the Gmail API service
-            var service = new GmailService(new BaseClientService.Initializer()
+            var service = new Google.Apis.Gmail.v1.GmailService(new BaseClientService.Initializer()
             {
                 HttpClientInitializer = credential,
                 ApplicationName = ApplicationName,

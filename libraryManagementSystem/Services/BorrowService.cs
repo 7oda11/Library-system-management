@@ -16,13 +16,16 @@ namespace libraryManagementSystem.Services
         public static List<BorrowingRecord> onBorrowRecord()
         {
             List<BorrowingRecord> borrowedBooks = dbContext.BorrowingRecords
-                .Where(b => b.UserId == UserService.CurrentUser.UserId)
+                .Where(b => b.Status == 0)
                 .ToList();
 
             return borrowedBooks;
         }
 
-
+        public static List<BorrowingRecord> searchBorrowingRecord(string userName)
+        {
+            return dbContext.BorrowingRecords.Where(b=>b.User.Username.Contains(userName)).ToList();
+        }
         public static void addBorrowRecord(int bookId, int userId, DateTime borrowDate)
         {
             using (var db = new LibraryDbContext())
@@ -35,13 +38,14 @@ namespace libraryManagementSystem.Services
                     return;
                 }
 
-               
+
                 BorrowingRecord record = new BorrowingRecord
                 {
                     BookId = bookId,
                     UserId = userId,
                     BorrowDate = borrowDate,
-                    DueDate = borrowDate.AddDays(14),
+                    //DueDate = borrowDate.AddDays(14),
+                    DueDate = borrowDate.AddSeconds(5),
                     Status = BorrowStatus.Borrowed
                 };
 
@@ -53,9 +57,6 @@ namespace libraryManagementSystem.Services
 
 
         }
-
-
-
         public static void ReturnBook(int borrowId)
         {
             using (var db = new LibraryDbContext())
@@ -80,6 +81,7 @@ namespace libraryManagementSystem.Services
 
                     //borrowedBooksForm?.LoadBorrowedBooks();
                     //booksForm?.LoadBooks();
+
                 }
             }
         }
