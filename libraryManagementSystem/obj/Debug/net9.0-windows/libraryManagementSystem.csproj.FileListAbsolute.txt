@@ -454,3 +454,31 @@ F:\1- iti\Entity project\Library-system-management\libraryManagementSystem\obj\D
 F:\1- iti\Entity project\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.pdb
 F:\1- iti\Entity project\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.genruntimeconfig.cache
 F:\1- iti\Entity project\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\ref\libraryManagementSystem.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\ClosedXML.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\ClosedXML.Parser.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Dapper.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\DocumentFormat.OpenXml.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\DocumentFormat.OpenXml.Framework.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\ExcelNumberFormat.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\FastMember.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Google.Apis.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Google.Apis.Auth.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Google.Apis.Core.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Google.Apis.Gmail.v1.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\Newtonsoft.Json.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\RBush.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\SixLabors.Fonts.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\System.Management.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageBorrowedBooks.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageLibrarianChangePassword.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageLibrarianProfile.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageLogs.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageReportsForm.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageReturnedBooks.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageUserAcion.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ReportAvaliableBooks.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ReportBorrowedBooks.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ReportOverdueBooks.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.BookDetailsForm.resources
+D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.ChangePasswordForm.resources
