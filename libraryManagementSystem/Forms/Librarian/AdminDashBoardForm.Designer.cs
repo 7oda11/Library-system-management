@@ -37,10 +37,9 @@
             // 
             // btn_manageBooks
             // 
-            btn_manageBooks.Location = new Point(228, 94);
-            btn_manageBooks.Margin = new Padding(3, 2, 3, 2);
+            btn_manageBooks.Location = new Point(261, 125);
             btn_manageBooks.Name = "btn_manageBooks";
-            btn_manageBooks.Size = new Size(207, 34);
+            btn_manageBooks.Size = new Size(237, 45);
             btn_manageBooks.TabIndex = 1;
             btn_manageBooks.Text = "Manage Books";
             btn_manageBooks.UseVisualStyleBackColor = true;
@@ -48,10 +47,9 @@
             // 
             // btn_manageUsers
             // 
-            btn_manageUsers.Location = new Point(228, 43);
-            btn_manageUsers.Margin = new Padding(3, 2, 3, 2);
+            btn_manageUsers.Location = new Point(261, 57);
             btn_manageUsers.Name = "btn_manageUsers";
-            btn_manageUsers.Size = new Size(207, 34);
+            btn_manageUsers.Size = new Size(237, 45);
             btn_manageUsers.TabIndex = 2;
             btn_manageUsers.Text = "Manage Users";
             btn_manageUsers.UseVisualStyleBackColor = true;
@@ -59,45 +57,44 @@
             // 
             // btn_viewLogs
             // 
-            btn_viewLogs.Location = new Point(228, 148);
-            btn_viewLogs.Margin = new Padding(3, 2, 3, 2);
+            btn_viewLogs.Location = new Point(261, 197);
             btn_viewLogs.Name = "btn_viewLogs";
-            btn_viewLogs.Size = new Size(207, 34);
+            btn_viewLogs.Size = new Size(237, 45);
             btn_viewLogs.TabIndex = 3;
             btn_viewLogs.Text = "View Logs";
             btn_viewLogs.UseVisualStyleBackColor = true;
+            btn_viewLogs.Click += btn_viewLogs_Click;
             // 
             // btn_generateReports
             // 
-            btn_generateReports.Location = new Point(228, 204);
-            btn_generateReports.Margin = new Padding(3, 2, 3, 2);
+            btn_generateReports.Location = new Point(261, 272);
             btn_generateReports.Name = "btn_generateReports";
-            btn_generateReports.Size = new Size(207, 34);
+            btn_generateReports.Size = new Size(237, 45);
             btn_generateReports.TabIndex = 4;
             btn_generateReports.Text = "Generate Reports";
             btn_generateReports.UseVisualStyleBackColor = true;
+            btn_generateReports.Click += btn_generateReports_Click;
             // 
             // btn_manageProfile
             // 
-            btn_manageProfile.Location = new Point(228, 260);
-            btn_manageProfile.Margin = new Padding(3, 2, 3, 2);
+            btn_manageProfile.Location = new Point(261, 347);
             btn_manageProfile.Name = "btn_manageProfile";
-            btn_manageProfile.Size = new Size(207, 34);
+            btn_manageProfile.Size = new Size(237, 45);
             btn_manageProfile.TabIndex = 5;
             btn_manageProfile.Text = "Manage Profile";
             btn_manageProfile.UseVisualStyleBackColor = true;
+            btn_manageProfile.Click += btn_manageProfile_Click;
             // 
             // AdminDashBoardForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(800, 451);
             Controls.Add(btn_manageProfile);
             Controls.Add(btn_generateReports);
             Controls.Add(btn_viewLogs);
             Controls.Add(btn_manageUsers);
             Controls.Add(btn_manageBooks);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "AdminDashBoardForm";
             Text = "AdminDashBoardForm";
             Load += AdminDashBoardForm_Load;

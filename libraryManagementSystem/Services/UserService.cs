@@ -63,7 +63,7 @@ namespace libraryManagementSystem.Services
 
 
 
-        private string HashPassword(string password)
+        private static string HashPassword(string password)
         {
             using (var sha256 = System.Security.Cryptography.SHA256.Create())
             {
@@ -193,6 +193,7 @@ namespace libraryManagementSystem.Services
             {
                 if (checkUniquePhoneForUpdateUser(user)) {
                     LibraryDbContext.SaveChanges();
+                    CurrentUser = user;
                     return true;
                 }
                 else
@@ -209,6 +210,17 @@ namespace libraryManagementSystem.Services
                 return false;
             }
 
+        }
+        public static bool checkPassword(string password)
+        {
+            if(CurrentUser.PasswordHash== HashPassword(password))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         public static bool deleteUser(int id)
         {

@@ -33,5 +33,7 @@ namespace libraryManagementSystem.Models
         public DateTime? ReturnDate { get; set; }
         [Required]
         public BorrowStatus Status { get; set; } = BorrowStatus.Borrowed;
+
+       
     }
 }

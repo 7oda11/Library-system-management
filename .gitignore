@@ -1,1 +1,15 @@
+# Ignore VS folders
 .vs/
+*.suo
+*.user
+*.cache
+
+# Ignore compiled binaries
+bin/
+obj/
+
+# Ignore credentials
+credentials.json
+libraryManagementSystem/bin/
+libraryManagementSystem/bin/Debug/
+libraryManagementSystem/bin/Debug/net9.0-windows/
