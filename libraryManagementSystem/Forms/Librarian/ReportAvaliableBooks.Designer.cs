@@ -1,6 +1,6 @@
 ﻿namespace libraryManagementSystem.Forms.Librarian
 {
-    partial class ManageAvaliableBooks
+    partial class ReportAvaliableBooks
     {
         /// <summary>
         /// Required designer variable.
@@ -28,82 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            btnbooks = new Button();
-            txtTitle = new TextBox();
-            txtCategory = new TextBox();
-            btnSearch = new Button();
-            label1 = new Label();
             label2 = new Label();
+            label1 = new Label();
+            btnSearch = new Button();
+            txtCategory = new TextBox();
+            txtTitle = new TextBox();
+            btnbooks = new Button();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 246);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(697, 192);
-            dataGridView1.TabIndex = 0;
-            // 
-            // btnbooks
-            // 
-            btnbooks.Location = new Point(256, 170);
-            btnbooks.Name = "btnbooks";
-            btnbooks.Size = new Size(149, 41);
-            btnbooks.TabIndex = 3;
-            btnbooks.Text = "Generate_Report";
-            btnbooks.UseVisualStyleBackColor = true;
-            btnbooks.Click += btnbooks_Click;
-            // 
-            // txtTitle
-            // 
-            txtTitle.Location = new Point(555, 24);
-            txtTitle.Name = "txtTitle";
-            txtTitle.Size = new Size(100, 23);
-            txtTitle.TabIndex = 4;
-            // 
-            // txtCategory
-            // 
-            txtCategory.Location = new Point(555, 84);
-            txtCategory.Name = "txtCategory";
-            txtCategory.Size = new Size(100, 23);
-            txtCategory.TabIndex = 5;
-            // 
-            // btnSearch
-            // 
-            btnSearch.Location = new Point(569, 146);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(75, 23);
-            btnSearch.TabIndex = 6;
-            btnSearch.Text = "Search";
-            btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(462, 32);
-            label1.Name = "label1";
-            label1.Size = new Size(29, 15);
-            label1.TabIndex = 7;
-            label1.Text = "Title";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(462, 92);
+            label2.Location = new Point(620, 99);
             label2.Name = "label2";
-            label2.Size = new Size(55, 15);
-            label2.TabIndex = 8;
+            label2.Size = new Size(69, 20);
+            label2.TabIndex = 15;
             label2.Text = "Category";
             // 
-            // ManageAvaliableBooks
+            // label1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            label1.AutoSize = true;
+            label1.Location = new Point(620, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 20);
+            label1.TabIndex = 14;
+            label1.Text = "Title";
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(742, 171);
+            btnSearch.Margin = new Padding(3, 4, 3, 4);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(86, 31);
+            btnSearch.TabIndex = 13;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // txtCategory
+            // 
+            txtCategory.Location = new Point(726, 88);
+            txtCategory.Margin = new Padding(3, 4, 3, 4);
+            txtCategory.Name = "txtCategory";
+            txtCategory.Size = new Size(114, 27);
+            txtCategory.TabIndex = 12;
+            // 
+            // txtTitle
+            // 
+            txtTitle.Location = new Point(726, 8);
+            txtTitle.Margin = new Padding(3, 4, 3, 4);
+            txtTitle.Name = "txtTitle";
+            txtTitle.Size = new Size(114, 27);
+            txtTitle.TabIndex = 11;
+            // 
+            // btnbooks
+            // 
+            btnbooks.Location = new Point(385, 203);
+            btnbooks.Margin = new Padding(3, 4, 3, 4);
+            btnbooks.Name = "btnbooks";
+            btnbooks.Size = new Size(170, 55);
+            btnbooks.TabIndex = 10;
+            btnbooks.Text = "Generate_Report";
+            btnbooks.UseVisualStyleBackColor = true;
+            btnbooks.Click += btnbooks_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(95, 304);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(797, 256);
+            dataGridView1.TabIndex = 9;
+            // 
+            // ReportAvaliableBookss
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1081, 519);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnSearch);
@@ -111,9 +116,9 @@
             Controls.Add(txtTitle);
             Controls.Add(btnbooks);
             Controls.Add(dataGridView1);
-            Name = "ManageAvaliableBooks";
-            Text = "ManageAvaliableBooks";
-            Load += ManageAvaliableBooks_Load;
+            Name = "ReportAvaliableBookss";
+            Text = "ReportAvaliableBookss";
+            Load += ReportAvaliableBookss_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -121,12 +126,12 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private Button btnbooks;
-        private TextBox txtTitle;
-        private TextBox txtCategory;
-        private Button btnSearch;
-        private Label label1;
         private Label label2;
+        private Label label1;
+        private Button btnSearch;
+        private TextBox txtCategory;
+        private TextBox txtTitle;
+        private Button btnbooks;
+        private DataGridView dataGridView1;
     }
 }

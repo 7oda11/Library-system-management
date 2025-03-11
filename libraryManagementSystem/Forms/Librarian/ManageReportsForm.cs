@@ -28,7 +28,7 @@ namespace libraryManagementSystem.Forms.Librarian
 
         private void btnbooks_Click(object sender, EventArgs e)
         {
-            ManageAvaliableBooks frm = new ManageAvaliableBooks();  
+            ReportAvaliableBooks frm = new ReportAvaliableBooks();  
             frm.ShowDialog();
            
         }

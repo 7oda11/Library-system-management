@@ -14,20 +14,19 @@ using System.Windows.Forms;
 
 namespace libraryManagementSystem.Forms.Librarian
 {
-    public partial class ManageAvaliableBooks : Form
+    public partial class ReportAvaliableBooks : Form
     {
-        public ManageAvaliableBooks()
+        public ReportAvaliableBooks()
         {
             InitializeComponent();
         }
 
-        private void ManageAvaliableBooks_Load(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-
-            LoadBooks();
-
+            string title = txtTitle.Text.Trim();
+            string category = txtCategory.Text.Trim();
+            LoadBooks(title, category);
         }
-
         private void LoadBooks(string title = null, string category = null)
         {
             var books = ReportService.GetBooks(title, category);
@@ -94,16 +93,9 @@ namespace libraryManagementSystem.Forms.Librarian
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void ReportAvaliableBookss_Load(object sender, EventArgs e)
         {
-            string title = txtTitle.Text.Trim();
-            string category = txtCategory.Text.Trim();
-            LoadBooks(title, category);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            LoadBooks();
         }
     }
 }
