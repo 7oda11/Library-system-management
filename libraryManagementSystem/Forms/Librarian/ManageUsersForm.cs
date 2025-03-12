@@ -27,11 +27,25 @@ namespace libraryManagementSystem.Forms.Librarian
         }
         private void loadData()
         {
-            var roles = new List<KeyValuePair<int, string>>()
+            var roles=new List<KeyValuePair<int, string>>();
+            if (UserService.CurrentUser.Role == UserRole.Admin)
+            {
+                 roles = new List<KeyValuePair<int, string>>()
+            {
+                new KeyValuePair<int, string>(0, "Librarian"),
+                new KeyValuePair<int, string>(1, "Member"),
+                new KeyValuePair<int, string>(2,"Admin")
+            };
+            }
+            else if (UserService.CurrentUser.Role == UserRole.Librarian)
+            {
+             roles = new List<KeyValuePair<int, string>>()
             {
                 new KeyValuePair<int, string>(0, "Librarian"),
                 new KeyValuePair<int, string>(1, "Member")
             };
+                
+            }
             cb_role.DataSource = roles;
             cb_role.DisplayMember = "Value";
             cb_role.ValueMember = "Key";
@@ -63,6 +77,12 @@ namespace libraryManagementSystem.Forms.Librarian
                 };
                 if (UserService.addUser(user))
                 {
+                    Log log = new Log()
+                    {
+                        UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
+                        Action = $"Admin Name {UserService.CurrentUser.Username} Add {(UserRole)role} {userName}"
+                    };
+                    logService.AddLog(log);
                     MessageBox.Show("User added successfully!");
                     ClearInputs();
                     loadData();
@@ -169,17 +189,18 @@ namespace libraryManagementSystem.Forms.Librarian
                 btn_delete.Show();
             }
         }
-
+        int role;
+        string userName;
         private void btn_update_Click(object sender, EventArgs e)
         {
             if (ValidateInputs())
             {
-                string userName = txt_userName.Text.Trim();
+                 userName = txt_userName.Text.Trim();
                 string phone = txt_phone.Text.Trim();
                 string email = txt_email.Text.Trim();
                 string password = txt_password.Text.Trim();
                 string confirmPassword = txt_confirmPassword.Text.Trim();
-                int role = Convert.ToInt32(cb_role.SelectedValue);
+                 role = Convert.ToInt32(cb_role.SelectedValue);
                 User user = UserService.getUserById(userId);
 
                 user.Username = userName;
@@ -191,6 +212,12 @@ namespace libraryManagementSystem.Forms.Librarian
                 user.CreatedAt = DateTime.Now;
                 if (UserService.updateUser(user))
                 {
+                    Log log = new Log()
+                    {
+                        UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
+                        Action = $"Admin Name {UserService.CurrentUser.Username} Update {(UserRole)role} {userName}"
+                    };
+                    logService.AddLog(log);
                     MessageBox.Show("User updated successfully!");
                     ClearInputs();
                     loadData();
@@ -212,6 +239,12 @@ namespace libraryManagementSystem.Forms.Librarian
             {
                 if (UserService.deleteUser(userId))
                 {
+                    Log log = new Log()
+                    {
+                        UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
+                        Action = $"Admin Name {UserService.CurrentUser.Username} Delete {(UserRole)role} {userName}"
+                    };
+                    logService.AddLog(log);
                     MessageBox.Show("User deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loadData();
                     ClearInputs();

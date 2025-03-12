@@ -98,24 +98,28 @@ namespace libraryManagementSystem.Services
 
 
         public static LibraryDbContext LibraryDbContext=new LibraryDbContext();
-        public static User user = new User()
-        {
-            UserId = 8,
-            Username = "mahmoud",
-            PasswordHash = "123456789",
-            Role = 0,
-            Email = "mahmoud@gmail.com",
-            PhoneNumber = "1234567890"
+        //public static User user = new User()
+        //{
+        //    UserId = 8,
+        //    Username = "mahmoud",
+        //    PasswordHash = "123456789",
+        //    Role = 0,
+        //    Email = "mahmoud@gmail.com",
+        //    PhoneNumber = "1234567890"
 
-        };
+        //};
          static UserService()
         {
             
         }
         public static List<User> getAllUsers()
         {
-            return LibraryDbContext.Users.Where(u=>u.UserId!=user.UserId).ToList();
+            return LibraryDbContext.Users
+        .Where(u => u.UserId != CurrentUser.UserId &&
+                   (CurrentUser.Role == UserRole.Admin || (CurrentUser.Role == UserRole.Librarian && u.Role == UserRole.Member)))
+        .ToList();
         }
+
         public static bool addUser(User user)
         {
             if (checkUniqueEmail(user))

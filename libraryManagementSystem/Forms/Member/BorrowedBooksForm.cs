@@ -155,24 +155,19 @@ namespace libraryManagementSystem.Forms.Member
         {
             if (record != null && record.Book != null && record.User != null)
             {
-                // Define the expected QR code file path
                 string qrFileName = $"QR_{record.User.Username}_{record.Book.Title}.png";
                 string qrDirectory = AppDomain.CurrentDomain.BaseDirectory;
                 string qrPath = Path.Combine(qrDirectory, qrFileName);
-
-                // Check if the QR code file exists
                 if (File.Exists(qrPath))
                 {
-                    // Load the QR code image into the PictureBox
-                    pictureBox_QRCode.Size = new Size(150, 150); // Set to a smaller size
-                    pictureBox_QRCode.SizeMode = PictureBoxSizeMode.StretchImage; // Ensure it fits properly
-
+                    pictureBox_QRCode.Size = new Size(150, 150);
+                    pictureBox_QRCode.SizeMode = PictureBoxSizeMode.StretchImage; 
                     pictureBox_QRCode.Image = Image.FromFile(qrPath);
                 }
                 else
                 {
                     MessageBox.Show("QR Code not found for this book!", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    pictureBox_QRCode.Image = null; // Clear the PictureBox if no QR Code is found
+                    pictureBox_QRCode.Image = null;
                 }
             }
         }
