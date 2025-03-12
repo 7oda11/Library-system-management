@@ -44,14 +44,7 @@ namespace libraryManagementSystem.Forms.Librarian
             manageLibrarianProfile.Show();
             this.Hide();
         }
-        private static string HashPassword(string password)
-        {
-            using (var sha256 = System.Security.Cryptography.SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(bytes);
-            }
-        }
+        
         private void btn_updatePassword_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt_oldPassword.Text) ||
@@ -79,7 +72,7 @@ namespace libraryManagementSystem.Forms.Librarian
             }
             else
             {
-                user.PasswordHash = HashPassword(txt_newPassword.Text);
+                user.PasswordHash = HashService.HashPassword(txt_newPassword.Text);
                 if (UserService.updateUser(user))
                 {
                     MessageBox.Show("User updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

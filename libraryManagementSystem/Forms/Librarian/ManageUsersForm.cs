@@ -70,8 +70,8 @@ namespace libraryManagementSystem.Forms.Librarian
                     Username = userName,
                     PhoneNumber = phone,
                     Email = email,
-                    PasswordHash = HashPassword(password),
-                    ConfirmPasswordHash = HashPassword(confirmPassword),
+                    PasswordHash =HashService.HashPassword(password),
+                    ConfirmPasswordHash = HashService.HashPassword(confirmPassword),
                     Role = (UserRole)role,
                     CreatedAt = DateTime.Now
                 };
@@ -90,14 +90,7 @@ namespace libraryManagementSystem.Forms.Librarian
             }
 
         }
-        private string HashPassword(string password)
-        {
-            using (var sha256 = System.Security.Cryptography.SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(bytes);
-            }
-        }
+        
         private bool ValidateInputs()
         {
             string userName = txt_userName.Text.Trim();
@@ -131,7 +124,7 @@ namespace libraryManagementSystem.Forms.Librarian
                 MessageBox.Show("Password must be at least 6 characters long.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (HashPassword(password) != HashPassword(confirmPassword))
+            if (HashService.HashPassword(password) != HashService.HashPassword(confirmPassword))
             {
                 MessageBox.Show("Passwords do not match.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -206,8 +199,8 @@ namespace libraryManagementSystem.Forms.Librarian
                 user.Username = userName;
                 user.PhoneNumber = phone;
                 user.Email = email;
-                user.PasswordHash = HashPassword(password);
-                user.ConfirmPasswordHash = HashPassword(confirmPassword);
+                user.PasswordHash = HashService.HashPassword(password);
+                user.ConfirmPasswordHash = HashService.HashPassword(confirmPassword);
                 user.Role = (UserRole)role;
                 user.CreatedAt = DateTime.Now;
                 if (UserService.updateUser(user))
