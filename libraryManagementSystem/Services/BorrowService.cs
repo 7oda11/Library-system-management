@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DocumentFormat.OpenXml.InkML;
 using libraryManagementSystem.Forms.Member;
 using libraryManagementSystem.Models;
 using Microsoft.EntityFrameworkCore;
+//using Microsoft.VisualBasic.ApplicationServices;
 
 namespace libraryManagementSystem.Services
 {
@@ -48,13 +50,42 @@ namespace libraryManagementSystem.Services
                     DueDate = borrowDate.AddSeconds(5),
                     Status = BorrowStatus.Borrowed
                 };
+                User user = db.Users.Find(userId);
+                var book = db.Books.Find(bookId);
+
+                if (book == null || user == null)
+                {
+                    MessageBox.Show("Invalid user or book selection.");
+                    return;
+                }
 
                 db.BorrowingRecords.Add(record);
                 db.SaveChanges();
                 MessageBox.Show("Book borrowed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                QRcodeDisplay(user, book,record);
+
             }
 
+
+        }
+        private static void QRcodeDisplay(User user,Book book, BorrowingRecord record)
+        {
+            string qrData = $"User: {user.Username}\n" +
+                   $"Email: {user.Email}\n" +
+                   $"Book: {book.Title}\n" +
+                   $"Borrow Date: {record.BorrowDate:yyyy-MM-dd}\n" +
+                   $"Due Date: {record.DueDate:yyyy-MM-dd}";
+
+            Bitmap qrCodeImage = QRCodeService.GenerateQRCode(qrData);
+
+            // Save QR Code as Image
+            string qrPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"QR_{user.Username}_{book.Title}.png");
+            QRCodeService.SaveQRCode(qrCodeImage, qrPath);
+
+            // Show success message
+            MessageBox.Show($"Book borrowed successfully!\nQR Code saved at: {qrPath}",
+                            "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
         public static void ReturnBook(int borrowId)

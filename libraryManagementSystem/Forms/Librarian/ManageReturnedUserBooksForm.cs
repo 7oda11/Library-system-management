@@ -38,12 +38,10 @@ namespace libraryManagementSystem.Forms.Librarian
         }
         private void OverdueTimer_Tick(object sender, EventArgs e)
         {
-            using (LibraryDbContext dbContext = new LibraryDbContext())
-            {
-                GmailService gmailService = new GmailService();
-                NotificationService notificationService = new NotificationService(dbContext, gmailService);
+            
+                NotificationService notificationService = new NotificationService(new LibraryDbContext(), new GmailService());
                 notificationService.SendOverdueNotifications();
-            }
+            
         }
 
         private void loadData()
