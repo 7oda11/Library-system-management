@@ -45,9 +45,10 @@
             // btnBorrow
             // 
             btnBorrow.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBorrow.Location = new Point(519, 412);
+            btnBorrow.Location = new Point(463, 425);
+            btnBorrow.Margin = new Padding(3, 2, 3, 2);
             btnBorrow.Name = "btnBorrow";
-            btnBorrow.Size = new Size(86, 48);
+            btnBorrow.Size = new Size(75, 36);
             btnBorrow.TabIndex = 1;
             btnBorrow.Text = "Borrow";
             btnBorrow.UseVisualStyleBackColor = true;
@@ -57,7 +58,7 @@
             // 
             lblCategory.AutoSize = true;
             lblCategory.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCategory.Location = new Point(564, 232);
+            lblCategory.Location = new Point(527, 231);
             lblCategory.Name = "lblCategory";
             lblCategory.Size = new Size(55, 20);
             lblCategory.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             lblAuthor.AutoSize = true;
             lblAuthor.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAuthor.Location = new Point(537, 342);
+            lblAuthor.Location = new Point(494, 347);
             lblAuthor.Name = "lblAuthor";
             lblAuthor.Size = new Size(55, 20);
             lblAuthor.TabIndex = 3;
@@ -77,7 +78,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(501, 195);
+            lblTitle.Location = new Point(466, 194);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(55, 20);
             lblTitle.TabIndex = 4;
@@ -87,7 +88,7 @@
             // 
             lblQuantity.AutoSize = true;
             lblQuantity.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblQuantity.Location = new Point(564, 263);
+            lblQuantity.Location = new Point(509, 266);
             lblQuantity.Name = "lblQuantity";
             lblQuantity.Size = new Size(53, 20);
             lblQuantity.TabIndex = 5;
@@ -96,9 +97,10 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(722, 412);
+            btnBack.Location = new Point(659, 425);
+            btnBack.Margin = new Padding(3, 2, 3, 2);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(86, 48);
+            btnBack.Size = new Size(75, 36);
             btnBack.TabIndex = 6;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
@@ -108,7 +110,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(537, 321);
+            label3.Location = new Point(494, 327);
             label3.Name = "label3";
             label3.Size = new Size(68, 20);
             label3.TabIndex = 8;
@@ -118,7 +120,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(474, 232);
+            label4.Location = new Point(438, 231);
             label4.Name = "label4";
             label4.Size = new Size(83, 20);
             label4.TabIndex = 9;
@@ -128,7 +130,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(477, 263);
+            label5.Location = new Point(429, 266);
             label5.Name = "label5";
             label5.Size = new Size(80, 20);
             label5.TabIndex = 10;
@@ -137,18 +139,19 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(4, 3);
+            pictureBox1.Location = new Point(4, 2);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(793, 445);
+            pictureBox1.Size = new Size(730, 459);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
             // 
             // BookDetailsForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(734, 464);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -159,6 +162,7 @@
             Controls.Add(lblCategory);
             Controls.Add(btnBorrow);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "BookDetailsForm";
             Text = "BookDetailsForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

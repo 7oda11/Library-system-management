@@ -24,7 +24,7 @@ namespace libraryManagementSystem.Forms.Member
         public BorrowedBooksForm()
         {
             InitializeComponent();
-            InitializeHiddenControls();
+            //InitializeHiddenControls();
         }
 
         private void BorrowedBooksForm_Load(object sender, EventArgs e)
@@ -52,93 +52,91 @@ namespace libraryManagementSystem.Forms.Member
             }
         }
 
+        //if we mant to give option to the user to retrurn book by him self
 
-        private void btnReturn_Click(object? sender, EventArgs e)
-        {
-            if (selectedRecord == null || selectedRecord.Status != BorrowStatus.Borrowed)
-                return;
+        //private void btnReturn_Click(object? sender, EventArgs e)
+        //{
+        //    if (selectedRecord == null || selectedRecord.Status != BorrowStatus.Borrowed)
+        //        return;
 
-            BorrowService.ReturnBook(selectedRecord.BorrowingId);
+        //    BorrowService.ReturnBook(selectedRecord.BorrowingId);
 
-            MessageBox.Show("Book Returned successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    MessageBox.Show("Book Returned successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //BookDetailsForm.UpdateAllForms();
-            HideReturnSection();
-            //LoadBorrowedBooks();
-            //BookService.getAllBooks();
-
-        }
+        //    HideReturnSection();
+            
+        //}
 
 
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            HideReturnSection();
-        }
+        //private void btnCancel_Click(object sender, EventArgs e)
+        //{
+        //    HideReturnSection();
+        //}
         private void btnRefresh_Click(object? sender, EventArgs e)
         {
             LoadBorrowedBooks();
         }
 
-        private void InitializeHiddenControls()
-        {
-            lblBookDetails = new Label
-            {
-                AutoSize = true,
-                Font = new Font("Arial", 10, FontStyle.Bold),
-                ForeColor = Color.White,
-                Visible = false
-            };
+        //private void InitializeHiddenControls()
+        //{
+        //    lblBookDetails = new Label
+        //    {
+        //        AutoSize = true,
+        //        Font = new Font("Arial", 10, FontStyle.Bold),
+        //        ForeColor = Color.White,
+        //        Visible = false
+        //    };
 
-            btnReturn = new Button
-            {
-                Text = "Return Book",
-                Size = new Size(120, 35),
-                BackColor = Color.Purple,
-                ForeColor = Color.White,
-                Visible = false
-            };
-            btnReturn.Click += btnReturn_Click;
+        //    btnReturn = new Button
+        //    {
+        //        Text = "Return Book",
+        //        Size = new Size(120, 35),
+        //        BackColor = Color.Purple,
+        //        ForeColor = Color.White,
+        //        Visible = false
+        //    };
+        //    btnReturn.Click += btnReturn_Click;
 
-            btnCancel = new Button
-            {
-                Text = "Cancel",
-                Size = new Size(120, 35),
-                BackColor = Color.Gray,
-                ForeColor = Color.White,
-                Visible = false
-            };
-            btnCancel.Click += btnCancel_Click;
+        //    btnCancel = new Button
+        //    {
+        //        Text = "Cancel",
+        //        Size = new Size(120, 35),
+        //        BackColor = Color.Gray,
+        //        ForeColor = Color.White,
+        //        Visible = false
+        //    };
+        //    btnCancel.Click += btnCancel_Click;
 
-            Controls.Add(lblBookDetails);
-            Controls.Add(btnReturn);
-            Controls.Add(btnCancel);
-        }
+        //    Controls.Add(lblBookDetails);
+        //    Controls.Add(btnReturn);
+        //    Controls.Add(btnCancel);
+        //}
 
-        private void ShowReturnSection()
-        {
-            lblBookDetails.Text = $"Book: {selectedRecord.BookId}\n Borrowed Date: {selectedRecord.BorrowDate}\n Due Date: {selectedRecord.DueDate}";
-            lblBookDetails.Visible = true;
-            lblBookDetails.Location = new Point(20, dgvBorrowedBooks.Bottom + 40);
-            lblBookDetails.BackColor = Color.FromArgb(110, 75, 125);
-            lblBookDetails.BringToFront();
+        //private void ShowReturnSection()
+        //{
+        //    lblBookDetails.Text = $"Book: {selectedRecord.BookId}\n Borrowed Date: {selectedRecord.BorrowDate}\n Due Date: {selectedRecord.DueDate}";
+        //    lblBookDetails.Visible = true;
+        //    lblBookDetails.Location = new Point(20, dgvBorrowedBooks.Bottom + 40);
+        //    lblBookDetails.BackColor = Color.FromArgb(110, 75, 125);
+        //    lblBookDetails.BringToFront();
 
-            btnReturn.Visible = true;
-            btnReturn.Location = new Point(20, lblBookDetails.Bottom + 20);
-            btnReturn.BringToFront();
+        //    btnReturn.Visible = true;
+        //    btnReturn.Location = new Point(20, lblBookDetails.Bottom + 20);
+        //    btnReturn.BringToFront();
 
-            btnCancel.Visible = true;
-            btnCancel.Location = new Point(150, lblBookDetails.Bottom + 20);
-            btnCancel.BringToFront();
-        }
+        //    btnCancel.Visible = true;
+        //    btnCancel.Location = new Point(150, lblBookDetails.Bottom + 20);
+        //    btnCancel.BringToFront();
+        //}
 
-        private void HideReturnSection()
-        {
-            lblBookDetails.Visible = false;
-            btnReturn.Visible = false;
-            btnCancel.Visible = false;
-            selectedRecord = null;
-        }
+        //private void HideReturnSection()
+        //{
+        //    lblBookDetails.Visible = false;
+        //    btnReturn.Visible = false;
+        //    btnCancel.Visible = false;
+        //    selectedRecord = null;
+        //}
 
         private void dgvBorrowedBooks_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -148,7 +146,7 @@ namespace libraryManagementSystem.Forms.Member
 
                 if (selectedRecord != null)
                 {
-                    ShowReturnSection();
+                    //ShowReturnSection();
                     LoadQRCodeFromDirectory(selectedRecord);
 
                 }
