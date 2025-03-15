@@ -1,4 +1,5 @@
-﻿using System;
+﻿using libraryManagementSystem.Forms.CommonFroms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,11 +48,24 @@ namespace libraryManagementSystem.Forms.Librarian
         {
             ManageLogs manageLogs = new ManageLogs();
             manageLogs.Show();
+            this.Hide();
         }
         private void btn_generateReports_Click(object sender, EventArgs e)
         {
             ManageReportsForm manageReportsForm = new ManageReportsForm();
             manageReportsForm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ManageLoginForm frm = new ManageLoginForm();
+            frm.Show();
             this.Hide();
         }
     }

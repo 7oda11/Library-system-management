@@ -1,5 +1,6 @@
 ﻿using ClosedXML.Excel;
 using FastMember;
+using libraryManagementSystem.Forms.CommonFroms;
 using libraryManagementSystem.Models;
 using libraryManagementSystem.Services;
 using System;
@@ -17,11 +18,11 @@ namespace libraryManagementSystem.Forms.Librarian
 {
     public partial class ReportBorrowedBooks : Form
     {
-       // public static List<BorrowingRecord> booksList;
+        // public static List<BorrowingRecord> booksList;
         public ReportBorrowedBooks()
         {
             InitializeComponent();
-            
+
         }
 
         private void btnborrowedbooks_Click(object sender, EventArgs e)
@@ -92,6 +93,20 @@ namespace libraryManagementSystem.Forms.Librarian
                 b.Status
             }).ToList();
             dataGridView1.DataSource = booksList;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManageLoginForm manageLoginForm = new ManageLoginForm();
+            manageLoginForm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ManageReportsForm form = new ManageReportsForm();   
+            form.Show();
+            this.Hide();
         }
     }
 }

@@ -52,5 +52,19 @@ namespace libraryManagementSystem.Forms.Librarian
             manageUserAcion.Show();
             this.Hide();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManageLoginForm loginForm = new ManageLoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AdminDashBoardForm adminDashBoardForm = new AdminDashBoardForm();
+            adminDashBoardForm.Show();
+            this.Hide();
+        }
     }
 }

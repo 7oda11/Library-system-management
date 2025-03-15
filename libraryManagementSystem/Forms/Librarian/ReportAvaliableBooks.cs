@@ -1,5 +1,6 @@
 ﻿using ClosedXML.Excel;
 using FastMember;
+using libraryManagementSystem.Forms.CommonFroms;
 using libraryManagementSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -96,6 +97,20 @@ namespace libraryManagementSystem.Forms.Librarian
         private void ReportAvaliableBookss_Load(object sender, EventArgs e)
         {
             LoadBooks();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ManageReportsForm frm = new ManageReportsForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManageLoginForm manageLoginForm = new ManageLoginForm();
+            manageLoginForm.Show();
+            this.Hide();
         }
     }
 }

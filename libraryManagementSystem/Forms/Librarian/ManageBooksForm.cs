@@ -1,4 +1,5 @@
-﻿using libraryManagementSystem.Models;
+﻿using libraryManagementSystem.Forms.CommonFroms;
+using libraryManagementSystem.Models;
 using libraryManagementSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -158,7 +159,7 @@ namespace libraryManagementSystem.Forms.Librarian
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            if (selectedBookId <= 0) 
+            if (selectedBookId <= 0)
             {
                 MessageBox.Show("Please select a book to delete.", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -170,29 +171,47 @@ namespace libraryManagementSystem.Forms.Librarian
                                                   MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-               
-                    var bookToDelete = BookService.GetBook(selectedBookId);
 
-                    if (bookToDelete != null)
+                var bookToDelete = BookService.GetBook(selectedBookId);
+
+                if (bookToDelete != null)
+                {
+                    if (BookService.deleteBook(selectedBookId))
                     {
-                        if (BookService.deleteBook(selectedBookId))
-                        {
-                            MessageBox.Show("Book deleted successfully!",               "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ClearInputs();
-                            loadData();
+                        MessageBox.Show("Book deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearInputs();
+                        loadData();
 
-                        }
-
-
-                    
                     }
-                    else
-                    {
-                        MessageBox.Show("Book not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                
+
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Book not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
 
+        private void dvg_books_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AdminDashBoardForm frm = new AdminDashBoardForm();
+            frm.ShowDialog();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManageLoginForm frm = new ManageLoginForm();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

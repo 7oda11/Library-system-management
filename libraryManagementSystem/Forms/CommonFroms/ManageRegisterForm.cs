@@ -19,7 +19,34 @@ namespace libraryManagementSystem.Forms.CommonFroms
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            txtConfirmPassword.UseSystemPasswordChar = !txtConfirmPassword.UseSystemPasswordChar;
+
+        }
+
+        private void ManageRegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblConfirmPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegister_Click_1(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
@@ -70,29 +97,13 @@ namespace libraryManagementSystem.Forms.CommonFroms
             {
                 MessageBox.Show(result, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void txtEmail_TextChanged(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            txtConfirmPassword.UseSystemPasswordChar = !txtConfirmPassword.UseSystemPasswordChar;
-
-        }
-
-        private void ManageRegisterForm_Load(object sender, EventArgs e)
-        {
-
+            ManageLoginForm manageLoginForm = new ManageLoginForm();
+            this.Hide();
+            manageLoginForm.Show();
         }
     }
 }

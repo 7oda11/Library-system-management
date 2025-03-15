@@ -1,5 +1,6 @@
 ﻿using ClosedXML.Excel;
 using FastMember;
+using libraryManagementSystem.Forms.CommonFroms;
 using libraryManagementSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,7 @@ namespace libraryManagementSystem.Forms.Librarian
                     b.Status
                 }).ToList();
 
-       
+
 
                 using (SaveFileDialog saveFileDialog = new SaveFileDialog())
                 {
@@ -94,6 +95,20 @@ namespace libraryManagementSystem.Forms.Librarian
 
             dataGridView1.DataSource = booksList;
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManageLoginForm manageLoginForm = new ManageLoginForm();
+            manageLoginForm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ManageReportsForm frm = new ManageReportsForm();    
+            frm.Show();
+            this.Hide();
         }
     }
 }

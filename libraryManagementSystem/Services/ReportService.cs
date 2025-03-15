@@ -12,7 +12,7 @@ namespace libraryManagementSystem.Services
     public static class ReportService
     {
 
-        private static string connectionString = "Data Source=LAPTOP-JMGMI5SB\\DEV;Initial Catalog=LibraryDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
+        private static string connectionString = "Data Source=.;Initial Catalog=LibraryDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
 
         //public static List<Book> GetBooks()
         //{
@@ -126,4 +126,9 @@ namespace libraryManagementSystem.Services
         }
 
     }
+
+
+
+
+
 }

@@ -138,7 +138,7 @@ namespace libraryManagementSystem.Forms.Librarian
             txt_email.Clear();
             txt_password.Clear();
             txt_confirmPassword.Clear();
-            cb_role.SelectedIndex = -1; 
+            cb_role.SelectedIndex = -1;
             ck_showPassword.Checked = false;
             ck_showConfirmPassword.Checked = false;
         }
@@ -219,11 +219,28 @@ namespace libraryManagementSystem.Forms.Librarian
             }
         }
 
-        private void btn_back_Click(object sender, EventArgs e)
+        //private void btn_back_Click(object sender, EventArgs e)
+        //{
+        //    AdminDashBoardForm dashboardForm = new AdminDashBoardForm();
+        //    dashboardForm.Show();
+        //    this.Hide();
+        //}
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             AdminDashBoardForm dashboardForm = new AdminDashBoardForm();
             dashboardForm.Show();
             this.Hide();
+        }
+
+        private void txt_confirmPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

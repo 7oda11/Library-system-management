@@ -1,5 +1,6 @@
 ﻿using ClosedXML.Excel;
 using FastMember;
+using libraryManagementSystem.Forms.CommonFroms;
 using libraryManagementSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -28,9 +29,10 @@ namespace libraryManagementSystem.Forms.Librarian
 
         private void btnbooks_Click(object sender, EventArgs e)
         {
-            ReportAvaliableBooks frm = new ReportAvaliableBooks();  
-            frm.ShowDialog();
-           
+            ReportAvaliableBooks frm = new ReportAvaliableBooks();
+            frm.Show();
+            this.Hide();
+
         }
 
 
@@ -40,7 +42,8 @@ namespace libraryManagementSystem.Forms.Librarian
         {
 
             ReportBorrowedBooks frm = new ReportBorrowedBooks();
-            frm.ShowDialog();
+            frm.Show();
+            this.Hide();
         }
 
 
@@ -50,9 +53,25 @@ namespace libraryManagementSystem.Forms.Librarian
         private void btnoverduebooks_Click(object sender, EventArgs e)
         {
             ReportOverdueBooks frm = new ReportOverdueBooks();
-            frm.ShowDialog();
+            frm.Show();
+            this.Hide();
 
-           
+
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManageLoginForm manageLoginForm = new ManageLoginForm();
+            manageLoginForm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AdminDashBoardForm frm = new AdminDashBoardForm();
+            frm.Show();   
+            this.Hide();
         }
     }
 }

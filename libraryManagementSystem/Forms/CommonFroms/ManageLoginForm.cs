@@ -58,12 +58,12 @@ namespace libraryManagementSystem.Forms.CommonFroms
                     AdminDashBoardForm adminDashBoardForm = new AdminDashBoardForm();
                     adminDashBoardForm.Show();
                     this.Hide();
-                   
-                    
+
+
                 }
                 else if (user.Role == UserRole.Member)
                 {
-                    
+
                     Member.Member member = new Member.Member(user.UserId);
                     this.Hide();
                     HomePageForm homePageForm = new HomePageForm();
@@ -81,6 +81,13 @@ namespace libraryManagementSystem.Forms.CommonFroms
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            ManageRegisterForm manageRegisterForm = new ManageRegisterForm();
+            manageRegisterForm.Show();
+            this.Hide();
         }
     }
 }

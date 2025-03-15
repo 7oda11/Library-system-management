@@ -20,19 +20,19 @@ namespace libraryManagementSystem.Forms.Librarian
             InitializeComponent();
         }
 
-        private void btn_logout_Click(object sender, EventArgs e)
-        {
-            ManageLoginForm loginForm = new ManageLoginForm();
-            loginForm.Show();
-            this.Hide();
-        }
+        //private void btn_logout_Click(object sender, EventArgs e)
+        //{
+        //    ManageLoginForm loginForm = new ManageLoginForm();
+        //    loginForm.Show();
+        //    this.Hide();
+        //}
 
-        private void btn_back_Click(object sender, EventArgs e)
-        {
-            ManageLogs manageLogs = new ManageLogs();
-            manageLogs.Show();
-            this.Hide();
-        }
+        //private void btn_back_Click(object sender, EventArgs e)
+        //{
+        //    ManageLogs manageLogs = new ManageLogs();
+        //    manageLogs.Show();
+        //    this.Hide();
+        //}
 
         private void ManageReturnedBooks_Load(object sender, EventArgs e)
         {
@@ -75,6 +75,20 @@ namespace libraryManagementSystem.Forms.Librarian
         {
             txt_bookName.Text = txt_userName.Text = "";
             loadData();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManageLoginForm loginForm = new ManageLoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ManageLogs manageLogs = new ManageLogs();
+            manageLogs.Show();
+            this.Hide();
         }
     }
 }

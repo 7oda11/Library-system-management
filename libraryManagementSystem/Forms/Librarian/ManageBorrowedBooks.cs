@@ -20,19 +20,19 @@ namespace libraryManagementSystem.Forms.Librarian
             InitializeComponent();
         }
 
-        private void btn_back_Click(object sender, EventArgs e)
-        {
-            ManageLogs manageLogs = new ManageLogs();
-            manageLogs.Show();
-            this.Hide();
-        }
+        //private void btn_back_Click(object sender, EventArgs e)
+        //{
+        //    ManageLogs manageLogs = new ManageLogs();
+        //    manageLogs.Show();
+        //    this.Hide();
+        //}
 
-        private void btn_logout_Click(object sender, EventArgs e)
-        {
-            ManageLoginForm manageLoginForm = new ManageLoginForm();
-            manageLoginForm.Show();
-            this.Hide();
-        }
+        //private void btn_logout_Click(object sender, EventArgs e)
+        //{
+        //    ManageLoginForm manageLoginForm = new ManageLoginForm();
+        //    manageLoginForm.Show();
+        //    this.Hide();
+        //}
 
         private void ManageBorrowedBooks_Load(object sender, EventArgs e)
         {
@@ -47,7 +47,7 @@ namespace libraryManagementSystem.Forms.Librarian
         {
             // Step 1: Validate input
             string bookName = txt_bookName.Text.Trim();
-            string userName=txt_userName.Text.Trim();
+            string userName = txt_userName.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(bookName) && string.IsNullOrWhiteSpace(userName))
             {
@@ -55,7 +55,7 @@ namespace libraryManagementSystem.Forms.Librarian
                 return;
             }
 
-            List<Log> searchResults = logService.SearchLogs(bookName,userName);
+            List<Log> searchResults = logService.SearchLogs(bookName, userName);
 
             if (searchResults.Count == 0)
             {
@@ -64,7 +64,7 @@ namespace libraryManagementSystem.Forms.Librarian
                 dt.Rows.Add("No data available");
                 dgv_logs.DataSource = dt;
                 MessageBox.Show("No books found .", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
-              
+
             }
             else
             {
@@ -77,6 +77,26 @@ namespace libraryManagementSystem.Forms.Librarian
         {
             txt_bookName.Text = txt_userName.Text = "";
             loadData();
+        }
+
+        private void dvg_books_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            ManageLoginForm manageLoginForm = new ManageLoginForm();
+            manageLoginForm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ManageLogs manageLogs = new ManageLogs();
+            manageLogs.Show();
+            this.Hide();
         }
     }
 }
