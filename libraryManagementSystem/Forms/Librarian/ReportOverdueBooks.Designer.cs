@@ -172,6 +172,7 @@
             Controls.Add(panel3);
             Controls.Add(panel1);
             Name = "ReportOverdueBooks";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageOverdueBooks";
             Load += ManageOverdueBooks_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

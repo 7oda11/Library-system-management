@@ -39,9 +39,9 @@
             // 
             btnRegister.BackColor = Color.FromArgb(85, 26, 139);
             btnRegister.FlatStyle = FlatStyle.Flat;
-            btnRegister.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRegister.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(77, 392);
+            btnRegister.Location = new Point(77, 368);
             btnRegister.Name = "btnRegister";
             btnRegister.Padding = new Padding(10, 5, 10, 5);
             btnRegister.Size = new Size(183, 40);
@@ -53,9 +53,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.icons8_library_100px;
-            pictureBox1.Location = new Point(263, 40);
+            pictureBox1.Location = new Point(246, 27);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(164, 150);
+            pictureBox1.Size = new Size(164, 162);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -65,20 +65,20 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(206, 205);
+            label1.Location = new Point(99, 203);
             label1.Name = "label1";
-            label1.Size = new Size(297, 24);
+            label1.Size = new Size(470, 24);
             label1.TabIndex = 9;
-            label1.Text = "Library Management System";
+            label1.Text = "Welcome To Our Library Management System";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnLogin
             // 
             btnLogin.BackColor = Color.FromArgb(85, 26, 139);
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(443, 392);
+            btnLogin.Location = new Point(427, 368);
             btnLogin.Name = "btnLogin";
             btnLogin.Padding = new Padding(10, 5, 10, 5);
             btnLogin.Size = new Size(182, 40);
@@ -93,13 +93,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(74, 35, 90);
-            ClientSize = new Size(671, 551);
+            ClientSize = new Size(658, 524);
             Controls.Add(btnLogin);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(btnRegister);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "ManageHomeForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageHomeForm";
             Load += ManageHomeForm_Load;
             Paint += ManageHomeForm_Paint;

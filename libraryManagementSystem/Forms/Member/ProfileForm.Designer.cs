@@ -188,6 +188,7 @@
             Controls.Add(label2);
             Controls.Add(pictureBox1);
             Name = "ProfileForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ProfileForm";
             Load += ProfileForm_Load;
             panel1.ResumeLayout(false);

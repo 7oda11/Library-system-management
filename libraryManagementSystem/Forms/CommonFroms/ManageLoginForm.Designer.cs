@@ -47,11 +47,10 @@
             // 
             txtUsername.BackColor = Color.White;
             txtUsername.BorderStyle = BorderStyle.FixedSingle;
-            txtUsername.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(242, 237);
-            txtUsername.Multiline = true;
+            txtUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.Location = new Point(214, 237);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(234, 26);
+            txtUsername.Size = new Size(287, 29);
             txtUsername.TabIndex = 0;
             // 
             // label1
@@ -59,7 +58,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(44, 62, 80);
-            label1.Location = new Point(83, 245);
+            label1.Location = new Point(48, 245);
             label1.Name = "label1";
             label1.Size = new Size(80, 18);
             label1.TabIndex = 1;
@@ -69,20 +68,19 @@
             // 
             txtPassword.BackColor = Color.White;
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
-            txtPassword.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(242, 312);
-            txtPassword.Multiline = true;
+            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(214, 312);
             txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(234, 26);
+            txtPassword.Size = new Size(287, 29);
             txtPassword.TabIndex = 2;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(44, 62, 80);
-            label2.Location = new Point(85, 320);
+            label2.Location = new Point(48, 320);
             label2.Name = "label2";
             label2.Size = new Size(78, 18);
             label2.TabIndex = 3;
@@ -110,7 +108,7 @@
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkBox1.ForeColor = Color.FromArgb(44, 62, 80);
-            checkBox1.Location = new Point(356, 356);
+            checkBox1.Location = new Point(381, 354);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(120, 19);
             checkBox1.TabIndex = 5;
@@ -151,13 +149,13 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(91, 44, 111);
-            label4.Location = new Point(271, 167);
+            label4.Location = new Point(301, 166);
             label4.Name = "label4";
-            label4.Size = new Size(126, 30);
+            label4.Size = new Size(74, 30);
             label4.TabIndex = 8;
-            label4.Text = "Login Form";
+            label4.Text = "Login ";
             // 
             // btnRegister
             // 
@@ -194,6 +192,7 @@
             Controls.Add(txtUsername);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "ManageLoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CommonFroms";
             Load += CommonFroms_Load;
             panel1.ResumeLayout(false);

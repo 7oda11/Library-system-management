@@ -96,6 +96,7 @@
             Controls.Add(pictureBox1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "BorrowedBooksHistoryForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BorrowedBooksHistoryForm";
             Load += BorrowedBooksHistoryForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_history).EndInit();

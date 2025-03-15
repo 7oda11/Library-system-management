@@ -237,6 +237,7 @@
             Controls.Add(panel2);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ManageReturnedBooks";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageReturnedBooks";
             Load += ManageReturnedBooks_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_logs).EndInit();

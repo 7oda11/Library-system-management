@@ -172,6 +172,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "ReportBorrowedBooks";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageBorrowedBooks";
             Load += ManageBorrowedBooks_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

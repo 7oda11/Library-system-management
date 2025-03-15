@@ -164,6 +164,7 @@
             Controls.Add(pictureBox1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "BookDetailsForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BookDetailsForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

@@ -166,6 +166,7 @@
             Controls.Add(pictureBox4);
             Controls.Add(panel1);
             Name = "ManageReportsForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageReportsForm";
             Load += ManageReportsForm_Load;
             panel1.ResumeLayout(false);

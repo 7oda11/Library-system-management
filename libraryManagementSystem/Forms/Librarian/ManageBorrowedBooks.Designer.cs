@@ -237,6 +237,7 @@
             Controls.Add(panel1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ManageBorrowedBooks";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageBorrowedBooks";
             Load += ManageBorrowedBooks_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_logs).EndInit();

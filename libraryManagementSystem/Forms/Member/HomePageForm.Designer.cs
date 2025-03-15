@@ -160,6 +160,7 @@
             Controls.Add(pictureBox1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "HomePageForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HomePageForm";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

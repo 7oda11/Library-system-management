@@ -172,7 +172,7 @@
             btn_back.BackColor = Color.Purple;
             btn_back.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_back.ForeColor = SystemColors.ButtonHighlight;
-            btn_back.Location = new Point(603, 374);
+            btn_back.Location = new Point(571, 365);
             btn_back.Margin = new Padding(3, 2, 3, 2);
             btn_back.Name = "btn_back";
             btn_back.Size = new Size(92, 33);
@@ -247,6 +247,7 @@
             Controls.Add(pictureBox1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ManageLibrarianChangePassword";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageLibrarianChangePassword";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

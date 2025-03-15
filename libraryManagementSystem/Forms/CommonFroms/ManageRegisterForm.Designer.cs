@@ -53,7 +53,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(214, 305);
+            checkBox1.Location = new Point(260, 312);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(105, 19);
             checkBox1.TabIndex = 11;
@@ -64,7 +64,7 @@
             // checkBox2
             // 
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(214, 384);
+            checkBox2.Location = new Point(260, 379);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(105, 19);
             checkBox2.TabIndex = 12;
@@ -78,7 +78,7 @@
             panel1.Controls.Add(label3);
             panel1.Location = new Point(1, -2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(671, 45);
+            panel1.Size = new Size(722, 45);
             panel1.TabIndex = 13;
             // 
             // label3
@@ -86,7 +86,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(633, 11);
+            label3.Location = new Point(693, 11);
             label3.Name = "label3";
             label3.Size = new Size(17, 17);
             label3.TabIndex = 0;
@@ -96,57 +96,53 @@
             // 
             txtUsername.BackColor = Color.White;
             txtUsername.BorderStyle = BorderStyle.FixedSingle;
-            txtUsername.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(149, 212);
-            txtUsername.Multiline = true;
+            txtUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.Location = new Point(149, 215);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(170, 22);
+            txtUsername.Size = new Size(216, 29);
             txtUsername.TabIndex = 14;
             // 
             // txtPassword
             // 
             txtPassword.BackColor = Color.White;
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
-            txtPassword.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPassword.Location = new Point(149, 277);
-            txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(170, 22);
+            txtPassword.Size = new Size(216, 29);
             txtPassword.TabIndex = 15;
+            txtPassword.UseSystemPasswordChar = true;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // txtConfirmPassword
             // 
             txtConfirmPassword.BackColor = Color.White;
             txtConfirmPassword.BorderStyle = BorderStyle.FixedSingle;
-            txtConfirmPassword.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtConfirmPassword.Location = new Point(149, 347);
-            txtConfirmPassword.Multiline = true;
+            txtConfirmPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtConfirmPassword.Location = new Point(149, 344);
             txtConfirmPassword.Name = "txtConfirmPassword";
-            txtConfirmPassword.PasswordChar = '*';
-            txtConfirmPassword.Size = new Size(170, 22);
+            txtConfirmPassword.Size = new Size(216, 29);
             txtConfirmPassword.TabIndex = 16;
+            txtConfirmPassword.UseSystemPasswordChar = true;
             // 
             // txtPhone
             // 
             txtPhone.BackColor = Color.White;
             txtPhone.BorderStyle = BorderStyle.FixedSingle;
-            txtPhone.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPhone.Location = new Point(503, 280);
-            txtPhone.Multiline = true;
+            txtPhone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPhone.Location = new Point(475, 282);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(148, 22);
+            txtPhone.Size = new Size(236, 29);
             txtPhone.TabIndex = 17;
             // 
             // txtEmail
             // 
             txtEmail.BackColor = Color.White;
             txtEmail.BorderStyle = BorderStyle.FixedSingle;
-            txtEmail.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEmail.Location = new Point(503, 217);
-            txtEmail.Multiline = true;
+            txtEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(475, 222);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(148, 22);
+            txtEmail.Size = new Size(236, 29);
             txtEmail.TabIndex = 18;
             // 
             // lblUsername
@@ -154,7 +150,7 @@
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUsername.ForeColor = Color.FromArgb(44, 62, 80);
-            lblUsername.Location = new Point(17, 217);
+            lblUsername.Location = new Point(12, 222);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(83, 17);
             lblUsername.TabIndex = 19;
@@ -165,7 +161,7 @@
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPassword.ForeColor = Color.FromArgb(44, 62, 80);
-            lblPassword.Location = new Point(17, 282);
+            lblPassword.Location = new Point(15, 282);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(80, 17);
             lblPassword.TabIndex = 20;
@@ -189,7 +185,7 @@
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblEmail.ForeColor = Color.FromArgb(44, 62, 80);
-            lblEmail.Location = new Point(393, 222);
+            lblEmail.Location = new Point(404, 227);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(48, 17);
             lblEmail.TabIndex = 22;
@@ -201,7 +197,7 @@
             lblPhone.AutoSize = true;
             lblPhone.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPhone.ForeColor = Color.FromArgb(44, 62, 80);
-            lblPhone.Location = new Point(393, 285);
+            lblPhone.Location = new Point(404, 289);
             lblPhone.Name = "lblPhone";
             lblPhone.Size = new Size(54, 17);
             lblPhone.TabIndex = 23;
@@ -220,13 +216,13 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(91, 44, 111);
-            label4.Location = new Point(258, 142);
+            label4.Location = new Point(281, 151);
             label4.Name = "label4";
-            label4.Size = new Size(172, 25);
+            label4.Size = new Size(125, 25);
             label4.TabIndex = 25;
-            label4.Text = "Registration Form";
+            label4.Text = "Registration ";
             // 
             // btnRegister
             // 
@@ -236,7 +232,7 @@
             btnRegister.FlatStyle = FlatStyle.Flat;
             btnRegister.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(247, 418);
+            btnRegister.Location = new Point(247, 428);
             btnRegister.Name = "btnRegister";
             btnRegister.Padding = new Padding(10, 5, 10, 5);
             btnRegister.Size = new Size(222, 43);
@@ -253,7 +249,7 @@
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(247, 497);
+            btnLogin.Location = new Point(247, 506);
             btnLogin.Name = "btnLogin";
             btnLogin.Padding = new Padding(10, 5, 10, 5);
             btnLogin.Size = new Size(222, 42);
@@ -267,7 +263,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(248, 249, 250);
-            ClientSize = new Size(671, 551);
+            ClientSize = new Size(723, 551);
             Controls.Add(btnLogin);
             Controls.Add(btnRegister);
             Controls.Add(label4);
@@ -287,6 +283,7 @@
             Controls.Add(checkBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "ManageRegisterForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageRegisterForm";
             Load += ManageRegisterForm_Load;
             panel1.ResumeLayout(false);

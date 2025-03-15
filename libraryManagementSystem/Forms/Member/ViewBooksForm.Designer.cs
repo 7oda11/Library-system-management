@@ -119,6 +119,7 @@
             Controls.Add(btnRefresh);
             Controls.Add(pictureBox1);
             Name = "ViewBooksForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewBooksForm";
             Load += ViewBooksForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvBooks).EndInit();
