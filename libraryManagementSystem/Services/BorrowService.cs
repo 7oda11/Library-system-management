@@ -23,10 +23,14 @@ namespace libraryManagementSystem.Services
 
             return borrowedBooks;
         }
+        public static List<BorrowingRecord> BorrowedHistory()
+        {
+            return dbContext.BorrowingRecords.ToList();
+        }
 
         public static List<BorrowingRecord> searchBorrowingRecord(string userName)
         {
-            return dbContext.BorrowingRecords.Where(b=>b.User.Username.Contains(userName)).ToList();
+            return dbContext.BorrowingRecords.Where(b=>b.User.Username.Contains(userName) &&b.Status==0).ToList();
         }
         public static void addBorrowRecord(int bookId, int userId, DateTime borrowDate)
         {

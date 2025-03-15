@@ -31,7 +31,7 @@ namespace libraryManagementSystem.Models
             // Default Admin User
             modelBuilder.Entity<User>().HasData(new User
             {
-                UserId=100,
+                UserId=1,
                 Username = "admin",
                 Email = "admin@library.com",
                 PasswordHash = HashService.HashPassword("Admin@123"), // Use HashService to hash the password

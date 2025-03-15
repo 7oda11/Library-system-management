@@ -33,24 +33,26 @@
             btnBorrowedBooks = new Button();
             btnManageProfile = new Button();
             btnLogout = new Button();
+            btn_BorrowedBooksHistory = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(150, 74);
+            label1.Location = new Point(171, 99);
             label1.Name = "label1";
-            label1.Size = new Size(320, 21);
+            label1.Size = new Size(396, 28);
             label1.TabIndex = 0;
             label1.Text = "Wecome to Library management System";
             // 
             // btnViewBooks
             // 
             btnViewBooks.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnViewBooks.Location = new Point(46, 149);
+            btnViewBooks.Location = new Point(53, 199);
+            btnViewBooks.Margin = new Padding(3, 4, 3, 4);
             btnViewBooks.Name = "btnViewBooks";
-            btnViewBooks.Size = new Size(131, 34);
+            btnViewBooks.Size = new Size(150, 45);
             btnViewBooks.TabIndex = 1;
             btnViewBooks.Text = "View Books";
             btnViewBooks.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // btnBorrowedBooks
             // 
             btnBorrowedBooks.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBorrowedBooks.Location = new Point(46, 217);
+            btnBorrowedBooks.Location = new Point(53, 289);
+            btnBorrowedBooks.Margin = new Padding(3, 4, 3, 4);
             btnBorrowedBooks.Name = "btnBorrowedBooks";
-            btnBorrowedBooks.Size = new Size(207, 34);
+            btnBorrowedBooks.Size = new Size(237, 45);
             btnBorrowedBooks.TabIndex = 2;
             btnBorrowedBooks.Text = "View Borrowed Books";
             btnBorrowedBooks.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@
             // btnManageProfile
             // 
             btnManageProfile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnManageProfile.Location = new Point(46, 284);
+            btnManageProfile.Location = new Point(53, 386);
+            btnManageProfile.Margin = new Padding(3, 4, 3, 4);
             btnManageProfile.Name = "btnManageProfile";
-            btnManageProfile.Size = new Size(207, 37);
+            btnManageProfile.Size = new Size(237, 49);
             btnManageProfile.TabIndex = 3;
             btnManageProfile.Text = "Manage Profile";
             btnManageProfile.UseVisualStyleBackColor = true;
@@ -81,24 +85,39 @@
             // btnLogout
             // 
             btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.Location = new Point(671, 380);
+            btnLogout.Location = new Point(767, 507);
+            btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(117, 40);
+            btnLogout.Size = new Size(134, 53);
             btnLogout.TabIndex = 4;
             btnLogout.Text = "log out";
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += btnLogout_Click;
             // 
+            // btn_BorrowedBooksHistory
+            // 
+            btn_BorrowedBooksHistory.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_BorrowedBooksHistory.Location = new Point(53, 472);
+            btn_BorrowedBooksHistory.Margin = new Padding(3, 4, 3, 4);
+            btn_BorrowedBooksHistory.Name = "btn_BorrowedBooksHistory";
+            btn_BorrowedBooksHistory.Size = new Size(327, 45);
+            btn_BorrowedBooksHistory.TabIndex = 5;
+            btn_BorrowedBooksHistory.Text = "View Borrowed Books History";
+            btn_BorrowedBooksHistory.UseVisualStyleBackColor = true;
+            btn_BorrowedBooksHistory.Click += btn_BorrowedBooksHistory_Click;
+            // 
             // HomePageForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(btn_BorrowedBooksHistory);
             Controls.Add(btnLogout);
             Controls.Add(btnManageProfile);
             Controls.Add(btnBorrowedBooks);
             Controls.Add(btnViewBooks);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "HomePageForm";
             Text = "HomePageForm";
             ResumeLayout(false);
@@ -112,5 +131,6 @@
         private Button btnBorrowedBooks;
         private Button btnManageProfile;
         private Button btnLogout;
+        private Button btn_BorrowedBooksHistory;
     }
 }
