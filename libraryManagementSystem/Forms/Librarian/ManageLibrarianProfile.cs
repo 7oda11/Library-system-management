@@ -76,7 +76,12 @@ namespace libraryManagementSystem.Forms.Librarian
                 if (UserService.updateUser(user))
                 {
                     MessageBox.Show("User updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    Log log = new Log()
+                    {
+                        UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
+                        Action = $"Admin Name {UserService.CurrentUser.Username} Update His Profile "
+                    };
+                    logService.AddLog(log);
                 }
             }
             catch (Exception ex)

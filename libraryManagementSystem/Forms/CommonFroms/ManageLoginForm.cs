@@ -53,7 +53,7 @@ namespace libraryManagementSystem.Forms.CommonFroms
             {
                 MessageBox.Show($"Welcome {user.Username}, login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                if (user.Role == UserRole.Librarian)
+                if (user.Role == UserRole.Librarian || user.Role==UserRole.Admin)
                 {
                     AdminDashBoardForm adminDashBoardForm = new AdminDashBoardForm();
                     adminDashBoardForm.Show();

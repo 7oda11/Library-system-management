@@ -129,9 +129,21 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
+            // btn_BorrowedBooksHistory
+            // 
+            btn_BorrowedBooksHistory.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_BorrowedBooksHistory.Location = new Point(53, 472);
+            btn_BorrowedBooksHistory.Margin = new Padding(3, 4, 3, 4);
+            btn_BorrowedBooksHistory.Name = "btn_BorrowedBooksHistory";
+            btn_BorrowedBooksHistory.Size = new Size(327, 45);
+            btn_BorrowedBooksHistory.TabIndex = 5;
+            btn_BorrowedBooksHistory.Text = "View Borrowed Books History";
+            btn_BorrowedBooksHistory.UseVisualStyleBackColor = true;
+            btn_BorrowedBooksHistory.Click += btn_BorrowedBooksHistory_Click;
+            // 
             // HomePageForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(684, 461);
             Controls.Add(label1);

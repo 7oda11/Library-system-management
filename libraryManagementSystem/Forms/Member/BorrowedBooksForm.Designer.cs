@@ -36,6 +36,9 @@
             panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgvBorrowedBooks).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pictureBox_QRCode = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)dgvBorrowedBooks).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_QRCode).BeginInit();
             SuspendLayout();
             // 
             // dgvBorrowedBooks
@@ -59,6 +62,16 @@
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
             btnRefresh.Click += btnRefresh_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(29, 53);
+            label1.Name = "label1";
+            label1.Size = new Size(167, 28);
+            label1.TabIndex = 2;
+            label1.Text = "Borrowed Books";
             // 
             // btnBack
             // 
@@ -93,7 +106,7 @@
             // 
             // BorrowedBooksForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(685, 518);
             Controls.Add(btnBack);

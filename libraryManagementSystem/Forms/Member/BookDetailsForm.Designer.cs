@@ -47,7 +47,7 @@
             btnBorrow.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBorrow.Location = new Point(519, 412);
             btnBorrow.Name = "btnBorrow";
-            btnBorrow.Size = new Size(75, 36);
+            btnBorrow.Size = new Size(86, 48);
             btnBorrow.TabIndex = 1;
             btnBorrow.Text = "Borrow";
             btnBorrow.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             btnBack.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBack.Location = new Point(722, 412);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 36);
+            btnBack.Size = new Size(86, 48);
             btnBack.TabIndex = 6;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
@@ -146,9 +146,9 @@
             // 
             // BookDetailsForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);

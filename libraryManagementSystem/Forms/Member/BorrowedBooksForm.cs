@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using libraryManagementSystem.Models;
 using libraryManagementSystem.Services;
 using Microsoft.EntityFrameworkCore;
+using QRCoder;
 
 namespace libraryManagementSystem.Forms.Member
 {
@@ -148,9 +149,31 @@ namespace libraryManagementSystem.Forms.Member
                 if (selectedRecord != null)
                 {
                     ShowReturnSection();
+                    LoadQRCodeFromDirectory(selectedRecord);
+
                 }
             }
 
+        }
+        private void LoadQRCodeFromDirectory(BorrowingRecord record)
+        {
+            if (record != null && record.Book != null && record.User != null)
+            {
+                string qrFileName = $"QR_{record.User.Username}_{record.Book.Title}.png";
+                string qrDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                string qrPath = Path.Combine(qrDirectory, qrFileName);
+                if (File.Exists(qrPath))
+                {
+                    pictureBox_QRCode.Size = new Size(150, 150);
+                    pictureBox_QRCode.SizeMode = PictureBoxSizeMode.StretchImage; 
+                    pictureBox_QRCode.Image = Image.FromFile(qrPath);
+                }
+                else
+                {
+                    MessageBox.Show("QR Code not found for this book!", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    pictureBox_QRCode.Image = null;
+                }
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -17,7 +17,7 @@ namespace libraryManagementSystem.Models
         [Required]
         public int UserId { get; set; }
         [ForeignKey("UserId")]
-        public virtual User User { get; set; } =new User();
+        public virtual User User { get; set; }
         public DateTime PerformedAt { get; set; } = DateTime.Now;
     }
 }

@@ -41,7 +41,7 @@ namespace libraryManagementSystem.Forms.Member
                 string confirmPassword = txtConfirmPassword.Text;
 
                 // ✅ التحقق من كلمة المرور القديمة
-                if (user.PasswordHash != HashPassword(oldPassword))
+                if (user.PasswordHash != HashService.HashPassword(oldPassword))
                 {
                     MessageBox.Show("Incorrect old password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -55,7 +55,7 @@ namespace libraryManagementSystem.Forms.Member
                 }
 
                 // ✅ تحديث كلمة المرور
-                user.PasswordHash = HashPassword(newPassword);
+                user.PasswordHash = HashService.HashPassword(newPassword);
                 dbContext.SaveChanges();
 
                 MessageBox.Show("Password changed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -72,14 +72,7 @@ namespace libraryManagementSystem.Forms.Member
             txtConfirmPassword.PasswordChar = showPassword ? '\0' : '●';
         }
 
-        private string HashPassword(string password)
-        {
-            using (var sha256 = System.Security.Cryptography.SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(bytes);
-            }
-        }
+       
 
         private void ChangePasswordForm_Load(object sender, EventArgs e)
         {

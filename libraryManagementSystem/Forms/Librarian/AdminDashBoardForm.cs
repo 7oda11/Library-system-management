@@ -65,7 +65,11 @@ namespace libraryManagementSystem.Forms.Librarian
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             ManageLoginForm frm = new ManageLoginForm();
-            frm.Show();
+            frm.Show();}
+        private void btn_returnedBooks_Click(object sender, EventArgs e)
+        {
+            ManageReturnedUserBooksForm man=new ManageReturnedUserBooksForm();
+            man.Show();
             this.Hide();
         }
     }
