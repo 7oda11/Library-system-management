@@ -38,10 +38,10 @@ namespace libraryManagementSystem.Forms.Librarian
         }
         private void OverdueTimer_Tick(object sender, EventArgs e)
         {
-            
-                NotificationService notificationService = new NotificationService(new LibraryDbContext(), new GmailService());
-                notificationService.SendOverdueNotifications();
-            
+
+            NotificationService notificationService = new NotificationService(new LibraryDbContext(), new GmailService());
+            notificationService.SendOverdueNotifications();
+
         }
 
         private void loadData()
@@ -49,8 +49,8 @@ namespace libraryManagementSystem.Forms.Librarian
             lbl_message.Visible = false;
             btn_return.Hide();
 
-            dgv_books.DataSource =BorrowService.onBorrowRecordDataForReturn();
-        
+            dgv_books.DataSource = BorrowService.onBorrowRecordDataForReturn();
+
 
             // Apply conditional formatting
             foreach (DataGridViewRow row in dgv_books.Rows)
@@ -137,6 +137,11 @@ namespace libraryManagementSystem.Forms.Librarian
             AdminDashBoardForm adminDashBoardForm = new AdminDashBoardForm();
             adminDashBoardForm.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

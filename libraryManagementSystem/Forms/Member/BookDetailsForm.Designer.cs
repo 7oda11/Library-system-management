@@ -45,7 +45,7 @@
             // btnBorrow
             // 
             btnBorrow.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBorrow.Location = new Point(454, 309);
+            btnBorrow.Location = new Point(463, 425);
             btnBorrow.Margin = new Padding(3, 2, 3, 2);
             btnBorrow.Name = "btnBorrow";
             btnBorrow.Size = new Size(75, 36);
@@ -58,7 +58,7 @@
             // 
             lblCategory.AutoSize = true;
             lblCategory.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCategory.Location = new Point(494, 174);
+            lblCategory.Location = new Point(527, 231);
             lblCategory.Name = "lblCategory";
             lblCategory.Size = new Size(55, 20);
             lblCategory.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             lblAuthor.AutoSize = true;
             lblAuthor.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAuthor.Location = new Point(470, 256);
+            lblAuthor.Location = new Point(494, 347);
             lblAuthor.Name = "lblAuthor";
             lblAuthor.Size = new Size(55, 20);
             lblAuthor.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(438, 146);
+            lblTitle.Location = new Point(466, 194);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(55, 20);
             lblTitle.TabIndex = 4;
@@ -88,7 +88,7 @@
             // 
             lblQuantity.AutoSize = true;
             lblQuantity.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblQuantity.Location = new Point(494, 197);
+            lblQuantity.Location = new Point(509, 266);
             lblQuantity.Name = "lblQuantity";
             lblQuantity.Size = new Size(53, 20);
             lblQuantity.TabIndex = 5;
@@ -97,7 +97,7 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(632, 309);
+            btnBack.Location = new Point(659, 425);
             btnBack.Margin = new Padding(3, 2, 3, 2);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(75, 36);
@@ -110,7 +110,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(470, 241);
+            label3.Location = new Point(494, 327);
             label3.Name = "label3";
             label3.Size = new Size(68, 20);
             label3.TabIndex = 8;
@@ -120,7 +120,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(415, 174);
+            label4.Location = new Point(438, 231);
             label4.Name = "label4";
             label4.Size = new Size(83, 20);
             label4.TabIndex = 9;
@@ -130,7 +130,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(417, 197);
+            label5.Location = new Point(429, 266);
             label5.Name = "label5";
             label5.Size = new Size(80, 20);
             label5.TabIndex = 10;
@@ -142,7 +142,7 @@
             pictureBox1.Location = new Point(4, 2);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(694, 334);
+            pictureBox1.Size = new Size(730, 459);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
@@ -151,7 +151,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(734, 464);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);

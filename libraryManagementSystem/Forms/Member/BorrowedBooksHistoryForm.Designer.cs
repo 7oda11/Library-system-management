@@ -28,71 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BorrowedBooksHistoryForm));
             btn_logout = new Button();
             btn_back = new Button();
             dgv_history = new DataGridView();
-            label1 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgv_history).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btn_logout
             // 
-            btn_logout.Location = new Point(676, 9);
+            btn_logout.BackColor = Color.FromArgb(74, 35, 90);
+            btn_logout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_logout.ForeColor = SystemColors.ButtonHighlight;
+            btn_logout.Location = new Point(569, 3);
             btn_logout.Margin = new Padding(3, 2, 3, 2);
             btn_logout.Name = "btn_logout";
-            btn_logout.Size = new Size(82, 22);
+            btn_logout.Size = new Size(112, 37);
             btn_logout.TabIndex = 0;
             btn_logout.Text = "Logout";
-            btn_logout.UseVisualStyleBackColor = true;
+            btn_logout.UseVisualStyleBackColor = false;
             btn_logout.Click += btn_logout_Click;
             // 
             // btn_back
             // 
-            btn_back.Location = new Point(10, 9);
+            btn_back.BackColor = Color.FromArgb(74, 35, 90);
+            btn_back.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_back.ForeColor = SystemColors.ButtonHighlight;
+            btn_back.Location = new Point(3, 3);
             btn_back.Margin = new Padding(3, 2, 3, 2);
             btn_back.Name = "btn_back";
-            btn_back.Size = new Size(82, 22);
+            btn_back.Size = new Size(92, 37);
             btn_back.TabIndex = 1;
             btn_back.Text = "Back";
-            btn_back.UseVisualStyleBackColor = true;
+            btn_back.UseVisualStyleBackColor = false;
             btn_back.Click += btn_back_Click;
             // 
             // dgv_history
             // 
             dgv_history.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_history.Location = new Point(10, 232);
+            dgv_history.Location = new Point(3, 221);
             dgv_history.Margin = new Padding(3, 2, 3, 2);
             dgv_history.Name = "dgv_history";
             dgv_history.RowHeadersWidth = 51;
-            dgv_history.Size = new Size(747, 141);
+            dgv_history.Size = new Size(678, 239);
             dgv_history.TabIndex = 2;
             // 
-            // label1
+            // pictureBox1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(289, 112);
-            label1.Name = "label1";
-            label1.Size = new Size(133, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Borrowed Bocks History";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(678, 213);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // BorrowedBooksHistoryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(768, 382);
-            Controls.Add(label1);
+            ClientSize = new Size(684, 461);
             Controls.Add(dgv_history);
             Controls.Add(btn_back);
             Controls.Add(btn_logout);
+            Controls.Add(pictureBox1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "BorrowedBooksHistoryForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BorrowedBooksHistoryForm";
             Load += BorrowedBooksHistoryForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_history).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -100,6 +109,6 @@
         private Button btn_logout;
         private Button btn_back;
         private DataGridView dgv_history;
-        private Label label1;
+        private PictureBox pictureBox1;
     }
 }

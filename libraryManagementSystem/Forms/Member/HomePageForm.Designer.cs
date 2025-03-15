@@ -57,10 +57,10 @@
             // btnLogout
             // 
             btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.Location = new Point(3, 320);
+            btnLogout.Location = new Point(0, 309);
             btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(185, 22);
+            btnLogout.Size = new Size(192, 36);
             btnLogout.TabIndex = 4;
             btnLogout.Text = "Log out";
             btnLogout.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(598, 346);
+            ClientSize = new Size(592, 347);
             Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);

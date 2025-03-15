@@ -135,11 +135,11 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgv_logs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_logs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_logs.Location = new Point(-1, 51);
+            dgv_logs.Location = new Point(-1, 46);
             dgv_logs.Margin = new Padding(3, 2, 3, 2);
             dgv_logs.Name = "dgv_logs";
             dgv_logs.RowHeadersWidth = 51;
-            dgv_logs.Size = new Size(578, 152);
+            dgv_logs.Size = new Size(578, 183);
             dgv_logs.TabIndex = 9;
             // 
             // panel2
