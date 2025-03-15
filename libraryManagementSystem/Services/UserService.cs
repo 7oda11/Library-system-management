@@ -1,4 +1,5 @@
 ﻿using libraryManagementSystem.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,10 @@ namespace libraryManagementSystem.Services
         {
             return _context.Users.ToList();
         }
-
+        public static List<User> GetAllUsersd()
+        {
+            return LibraryDbContext.Users.ToList();
+        }
 
         public User? Login(string username, string password)
         {
@@ -114,11 +118,31 @@ namespace libraryManagementSystem.Services
         }
         public static List<User> getAllUsers()
         {
-            return LibraryDbContext.Users
-        .Where(u => u.UserId != CurrentUser.UserId &&
-                   (CurrentUser.Role == UserRole.Admin || (CurrentUser.Role == UserRole.Librarian && u.Role == UserRole.Member)))
-        .ToList();
+            
+                List<User> users = new List<User>();
+                if (CurrentUser.Role == UserRole.Admin)
+                {
+                    users = LibraryDbContext.Users
+                        .Where(u => u.UserId != CurrentUser.UserId)
+                        .ToList();
+                }
+                else if (CurrentUser.Role == UserRole.Librarian)
+            {
+
+                users = LibraryDbContext.Users
+                        .Where(u => u.UserId != CurrentUser.UserId && u.Role != UserRole.Admin)
+                        .ToList();
+                }
+
+            MessageBox.Show(CurrentUser.Role.ToString());
+
+            return users;
+            
         }
+
+
+
+
 
         public static bool addUser(User user)
         {

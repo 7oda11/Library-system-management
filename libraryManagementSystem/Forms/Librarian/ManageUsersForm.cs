@@ -27,34 +27,40 @@ namespace libraryManagementSystem.Forms.Librarian
         }
         private void loadData()
         {
-            var roles=new List<KeyValuePair<int, string>>();
+            var roles = new List<KeyValuePair<int, string>>();
+
             if (UserService.CurrentUser.Role == UserRole.Admin)
             {
-                 roles = new List<KeyValuePair<int, string>>()
-            {
-                new KeyValuePair<int, string>(0, "Librarian"),
-                new KeyValuePair<int, string>(1, "Member"),
-                new KeyValuePair<int, string>(2,"Admin")
-            };
+                roles = new List<KeyValuePair<int, string>>()
+        {
+            new KeyValuePair<int, string>(0, "Librarian"),
+            new KeyValuePair<int, string>(1, "Member"),
+            new KeyValuePair<int, string>(2, "Admin")
+        };
             }
             else if (UserService.CurrentUser.Role == UserRole.Librarian)
             {
-             roles = new List<KeyValuePair<int, string>>()
-            {
-                new KeyValuePair<int, string>(0, "Librarian"),
-                new KeyValuePair<int, string>(1, "Member")
-            };
-                
+                roles = new List<KeyValuePair<int, string>>()
+        {
+            new KeyValuePair<int, string>(0, "Librarian"),
+            new KeyValuePair<int, string>(1, "Member")
+        };
             }
+
             cb_role.DataSource = roles;
             cb_role.DisplayMember = "Value";
             cb_role.ValueMember = "Key";
-            dgv_users.DataSource = UserService.getAllUsers();
+
+            dgv_users.DataSource = null; // Reset DataSource**
+            dgv_users.DataSource = UserService.getAllUsers(); // Reload users
             dgv_users.Columns["confirmPasswordHash"].Visible = false;
+            dgv_users.Refresh(); // Ensure UI refresh
+
             btn_add.Show();
             btn_delete.Hide();
             btn_update.Hide();
         }
+
         private void btn_add_Click(object sender, EventArgs e)
         {
             if (ValidateInputs())
@@ -70,7 +76,7 @@ namespace libraryManagementSystem.Forms.Librarian
                     Username = userName,
                     PhoneNumber = phone,
                     Email = email,
-                    PasswordHash =HashService.HashPassword(password),
+                    PasswordHash = HashService.HashPassword(password),
                     ConfirmPasswordHash = HashService.HashPassword(confirmPassword),
                     Role = (UserRole)role,
                     CreatedAt = DateTime.Now
@@ -90,7 +96,7 @@ namespace libraryManagementSystem.Forms.Librarian
             }
 
         }
-        
+
         private bool ValidateInputs()
         {
             string userName = txt_userName.Text.Trim();
@@ -188,35 +194,51 @@ namespace libraryManagementSystem.Forms.Librarian
         {
             if (ValidateInputs())
             {
-                 userName = txt_userName.Text.Trim();
+                userName = txt_userName.Text.Trim();
                 string phone = txt_phone.Text.Trim();
                 string email = txt_email.Text.Trim();
                 string password = txt_password.Text.Trim();
                 string confirmPassword = txt_confirmPassword.Text.Trim();
-                 role = Convert.ToInt32(cb_role.SelectedValue);
+                role = Convert.ToInt32(cb_role.SelectedValue);
+
                 User user = UserService.getUserById(userId);
+
+                // Prevent logged-in admin from changing their own role
+                if (user.UserId == UserService.CurrentUser.UserId && UserService.CurrentUser.Role == UserRole.Admin)
+                {
+                    role = (int)UserRole.Admin;  // Ensure role stays Admin
+                }
 
                 user.Username = userName;
                 user.PhoneNumber = phone;
                 user.Email = email;
                 user.PasswordHash = HashService.HashPassword(password);
                 user.ConfirmPasswordHash = HashService.HashPassword(confirmPassword);
-                user.Role = (UserRole)role;
+                user.Role = (UserRole)role;  // Assign the validated role
                 user.CreatedAt = DateTime.Now;
+
                 if (UserService.updateUser(user))
                 {
-                    Log log = new Log()
-                    {
-                        UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
-                        Action = $"Admin Name {UserService.CurrentUser.Username} Update {(UserRole)role} {userName}"
-                    };
-                    logService.AddLog(log);
+                    //Log log = new Log()
+                    //{
+                    //    UserId = UserService.CurrentUser.UserId,
+                    //    Action = $"Admin Name {UserService.CurrentUser.Username} Updated {(UserRole)role} {userName}"
+                    //};
+                    MessageBox.Show(UserService. CurrentUser.Role.ToString());
+
+                    //logService.AddLog(log);
+
                     MessageBox.Show("User updated successfully!");
+
+                    dgv_users.DataSource = null;  // Clear the current data source
+                    loadData(); // Reload updated data
+                    dgv_users.Refresh(); // Refresh the UI
                     ClearInputs();
-                    loadData();
                 }
             }
         }
+
+
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
