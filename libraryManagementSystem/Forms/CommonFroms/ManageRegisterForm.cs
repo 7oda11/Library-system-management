@@ -26,13 +26,15 @@ namespace libraryManagementSystem.Forms.CommonFroms
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+            // txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+            txtPassword.UseSystemPasswordChar = !checkBox1.Checked;
 
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            txtConfirmPassword.UseSystemPasswordChar = !txtConfirmPassword.UseSystemPasswordChar;
+            //txtConfirmPassword.UseSystemPasswordChar = !txtConfirmPassword.UseSystemPasswordChar;
+            txtConfirmPassword.UseSystemPasswordChar = !checkBox2.Checked;
 
         }
 
@@ -104,6 +106,11 @@ namespace libraryManagementSystem.Forms.CommonFroms
             ManageLoginForm manageLoginForm = new ManageLoginForm();
             this.Hide();
             manageLoginForm.Show();
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

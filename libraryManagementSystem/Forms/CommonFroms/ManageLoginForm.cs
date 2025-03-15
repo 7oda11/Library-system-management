@@ -80,7 +80,8 @@ namespace libraryManagementSystem.Forms.CommonFroms
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+           // txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+            txtPassword.UseSystemPasswordChar = !checkBox1.Checked;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

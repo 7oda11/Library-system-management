@@ -40,6 +40,7 @@
             panel1 = new Panel();
             label2 = new Label();
             pictureBox1 = new PictureBox();
+            btn_back = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -163,11 +164,26 @@
             pictureBox1.TabIndex = 35;
             pictureBox1.TabStop = false;
             // 
+            // btn_back
+            // 
+            btn_back.BackColor = Color.Purple;
+            btn_back.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_back.ForeColor = SystemColors.ButtonHighlight;
+            btn_back.Location = new Point(517, 338);
+            btn_back.Margin = new Padding(3, 2, 3, 2);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(110, 33);
+            btn_back.TabIndex = 36;
+            btn_back.Text = "Back";
+            btn_back.UseVisualStyleBackColor = false;
+            btn_back.Click += btn_back_Click;
+            // 
             // ManageLibrarianProfile
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(639, 382);
+            Controls.Add(btn_back);
             Controls.Add(panel1);
             Controls.Add(btn_changePassword);
             Controls.Add(btn_update);
@@ -180,6 +196,7 @@
             Controls.Add(pictureBox1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ManageLibrarianProfile";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageLibrarianProfile";
             Load += ManageLibrarianProfile_Load;
             panel1.ResumeLayout(false);
@@ -202,5 +219,6 @@
         private Panel panel1;
         private Label label2;
         private PictureBox pictureBox1;
+        private Button btn_back;
     }
 }

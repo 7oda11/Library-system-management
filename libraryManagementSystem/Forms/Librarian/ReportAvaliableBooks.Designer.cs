@@ -231,6 +231,7 @@
             Controls.Add(panel1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ReportAvaliableBooks";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ReportAvaliableBookss";
             Load += ReportAvaliableBookss_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

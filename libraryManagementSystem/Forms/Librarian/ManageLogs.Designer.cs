@@ -170,6 +170,7 @@
             Controls.Add(panel1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ManageLogs";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageLogs";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
