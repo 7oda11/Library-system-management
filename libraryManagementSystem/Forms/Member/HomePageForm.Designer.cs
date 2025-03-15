@@ -37,6 +37,7 @@
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -49,7 +50,7 @@
             label1.ForeColor = Color.Purple;
             label1.Location = new Point(222, 9);
             label1.Name = "label1";
-            label1.Size = new Size(459, 19);
+            label1.Size = new Size(557, 25);
             label1.TabIndex = 0;
             label1.Text = "Welcome to Library management System";
             // 
@@ -100,6 +101,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Purple;
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(btnViewBooks);
             panel1.Controls.Add(btnLogout);
@@ -129,17 +131,16 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
-            // btn_BorrowedBooksHistory
+            // button1
             // 
-            btn_BorrowedBooksHistory.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_BorrowedBooksHistory.Location = new Point(53, 472);
-            btn_BorrowedBooksHistory.Margin = new Padding(3, 4, 3, 4);
-            btn_BorrowedBooksHistory.Name = "btn_BorrowedBooksHistory";
-            btn_BorrowedBooksHistory.Size = new Size(327, 45);
-            btn_BorrowedBooksHistory.TabIndex = 5;
-            btn_BorrowedBooksHistory.Text = "View Borrowed Books History";
-            btn_BorrowedBooksHistory.UseVisualStyleBackColor = true;
-            btn_BorrowedBooksHistory.Click += btn_BorrowedBooksHistory_Click;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(0, 306);
+            button1.Name = "button1";
+            button1.Size = new Size(220, 37);
+            button1.TabIndex = 6;
+            button1.Text = "Book History";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // HomePageForm
             // 
@@ -168,5 +169,6 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Button button1;
     }
 }

@@ -18,7 +18,15 @@ namespace libraryManagementSystem.Services
         public static List<BorrowingRecord> onBorrowRecord()
         {
             List<BorrowingRecord> borrowedBooks = dbContext.BorrowingRecords
-                .Where(b => b.Status == 0)
+                .Where(b => b.Status == 0 && b.UserId==UserService.CurrentUser.UserId)
+                .ToList();
+
+            return borrowedBooks;
+        }
+        public static List<BorrowingRecord> onBorrowRecordDataForReturn()
+        {
+            List<BorrowingRecord> borrowedBooks = dbContext.BorrowingRecords
+                .Where(b => b.Status !=BorrowStatus.Returned  )
                 .ToList();
 
             return borrowedBooks;

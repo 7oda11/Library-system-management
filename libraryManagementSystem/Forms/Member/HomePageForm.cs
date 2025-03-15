@@ -46,5 +46,12 @@ namespace libraryManagementSystem.Forms.Member
             borrowedBooksHistoryForm.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BorrowedBooksHistoryForm borrowedBooksHistoryForm1 = new BorrowedBooksHistoryForm();
+            borrowedBooksHistoryForm1.Show();
+            this.Hide();
+        }
     }
 }

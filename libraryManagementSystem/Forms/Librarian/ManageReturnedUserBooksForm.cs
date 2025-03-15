@@ -49,8 +49,8 @@ namespace libraryManagementSystem.Forms.Librarian
             lbl_message.Visible = false;
             btn_return.Hide();
 
-            var borrowRecords = BorrowService.onBorrowRecord();
-            dgv_books.DataSource = borrowRecords;
+            dgv_books.DataSource =BorrowService.onBorrowRecordDataForReturn();
+        
 
             // Apply conditional formatting
             foreach (DataGridViewRow row in dgv_books.Rows)

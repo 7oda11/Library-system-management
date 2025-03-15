@@ -32,12 +32,12 @@
             dgvBorrowedBooks = new DataGridView();
             btnRefresh = new Button();
             btnBack = new Button();
-            pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)dgvBorrowedBooks).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pictureBox1 = new PictureBox();
             pictureBox_QRCode = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvBorrowedBooks).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_QRCode).BeginInit();
             SuspendLayout();
             // 
@@ -46,6 +46,7 @@
             dgvBorrowedBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBorrowedBooks.Location = new Point(36, 95);
             dgvBorrowedBooks.Name = "dgvBorrowedBooks";
+            dgvBorrowedBooks.RowHeadersWidth = 51;
             dgvBorrowedBooks.Size = new Size(343, 267);
             dgvBorrowedBooks.TabIndex = 0;
             dgvBorrowedBooks.RowHeaderMouseDoubleClick += dgvBorrowedBooks_RowHeaderMouseDoubleClick;
@@ -63,16 +64,6 @@
             btnRefresh.UseVisualStyleBackColor = false;
             btnRefresh.Click += btnRefresh_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(29, 53);
-            label1.Name = "label1";
-            label1.Size = new Size(167, 28);
-            label1.TabIndex = 2;
-            label1.Text = "Borrowed Books";
-            // 
             // btnBack
             // 
             btnBack.BackColor = Color.Purple;
@@ -86,6 +77,15 @@
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(110, 75, 125);
+            panel1.Controls.Add(pictureBox_QRCode);
+            panel1.Location = new Point(2, 394);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(681, 121);
+            panel1.TabIndex = 5;
+            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -96,13 +96,13 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // panel1
+            // pictureBox_QRCode
             // 
-            panel1.BackColor = Color.FromArgb(110, 75, 125);
-            panel1.Location = new Point(2, 394);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(681, 121);
-            panel1.TabIndex = 5;
+            pictureBox_QRCode.Location = new Point(457, 16);
+            pictureBox_QRCode.Name = "pictureBox_QRCode";
+            pictureBox_QRCode.Size = new Size(180, 96);
+            pictureBox_QRCode.TabIndex = 0;
+            pictureBox_QRCode.TabStop = false;
             // 
             // BorrowedBooksForm
             // 
@@ -118,7 +118,9 @@
             Text = "BorrowedBooksForm";
             Load += BorrowedBooksForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvBorrowedBooks).EndInit();
+            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_QRCode).EndInit();
             ResumeLayout(false);
         }
 
@@ -127,7 +129,8 @@
         private DataGridView dgvBorrowedBooks;
         private Button btnRefresh;
         private Button btnBack;
-        private PictureBox pictureBox1;
         private Panel panel1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox_QRCode;
     }
 }
