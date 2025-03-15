@@ -18,12 +18,14 @@ namespace libraryManagementSystem.Models
         public int UserId { get; set; }
         [ForeignKey("UserId")]
         [InverseProperty("BorrowingRecords")]
-        public virtual User User { get; set; } 
+        public virtual User? User { get; set; }
+            //= new User(); 
         [Required]
         public int BookId { get; set; }
         [ForeignKey("BookId")]
         [InverseProperty("BorrowingRecords")]
-        public virtual Book Book { get; set; } 
+        public virtual Book? Book { get; set; } 
+            //= new Book();
         [Required]
         public DateTime BorrowDate { get; set; }
         [Required]
@@ -31,5 +33,7 @@ namespace libraryManagementSystem.Models
         public DateTime? ReturnDate { get; set; }
         [Required]
         public BorrowStatus Status { get; set; } = BorrowStatus.Borrowed;
+
+       
     }
 }

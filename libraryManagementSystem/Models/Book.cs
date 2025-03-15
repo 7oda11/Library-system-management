@@ -15,16 +15,24 @@ namespace libraryManagementSystem.Models
         [Key]
         public int BookId { get; set; }
         [Required, StringLength(100)]
-        public string Title { get; set; }
+        public string Title { get; set; } = string.Empty;
         [Required, StringLength(50)]
-        public string Author { get; set; }
+        public string Author { get; set; } = string.Empty;
         [Required, StringLength(20)]
-        public string ISBN { get; set; }
-        public string Category { get; set; }
+        public string ISBN { get; set; } = string.Empty;
         public int PublishedYear { get; set; }
         public int Quantity { get; set; } // Stock
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         [InverseProperty("Book")]
         public virtual List<BorrowingRecord> BorrowingRecords { get; set; } = new List<BorrowingRecord>();
+
+        [ForeignKey("Category")]
+        public int CategoryId { get; set; }
+
+        public virtual Category Category { get; set; } = new Category();
+        public override string ToString()
+        {
+            return $"{Category.Name}";
+        }
     }
 }

@@ -1,2 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" />
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Forms\CommonFroms\ManageHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\CommonFroms\ManageLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\CommonFroms\ManageRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\AdminDashBoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\Librarian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageBorrowedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageLibrarianChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageLibrarianProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageReturnedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ReportAvaliableBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ReportBorrowedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ReportOverdueBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\BookDetailsForm.cs">
+     <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Librarian\ManageUserAcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\BorrowedBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\HomePageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Member\ViewBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
