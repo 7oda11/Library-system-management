@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|d:\\iti\\ef\u0026linq\\librarymanagementsystemproject\\librarymanagementsystem\\forms\\librarian\\manageusersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|solutionrelative:librarymanagementsystem\\forms\\librarian\\manageusersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|d:\\iti\\ef\u0026linq\\librarymanagementsystemproject\\librarymanagementsystem\\services\\borrowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|solutionrelative:librarymanagementsystem\\services\\borrowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|d:\\iti\\ef\u0026linq\\librarymanagementsystemproject\\librarymanagementsystem\\forms\\member\\bookdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|solutionrelative:librarymanagementsystem\\forms\\member\\bookdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|d:\\iti\\ef\u0026linq\\librarymanagementsystemproject\\librarymanagementsystem\\forms\\member\\bookdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|solutionrelative:librarymanagementsystem\\forms\\member\\bookdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|d:\\iti\\ef\u0026linq\\librarymanagementsystemproject\\librarymanagementsystem\\forms\\member\\borrowedbooksform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|solutionrelative:librarymanagementsystem\\forms\\member\\borrowedbooksform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|d:\\iti\\ef\u0026linq\\librarymanagementsystemproject\\librarymanagementsystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|solutionrelative:librarymanagementsystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|d:\\iti\\ef\u0026linq\\librarymanagementsystemproject\\librarymanagementsystem\\forms\\librarian\\manageusersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|solutionrelative:librarymanagementsystem\\forms\\librarian\\manageusersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{877FE8B9-260B-4813-B0AB-5C2D9A7EDC34}|libraryManagementSystem\\libraryManagementSystem.csproj|d:\\iti\\ef\u0026linq\\librarymanagementsystemproject\\librarymanagementsystem\\forms\\librarian\\manageusersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -26,8 +42,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 242,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BorrowService.cs",
+              "DocumentMoniker": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Services\\BorrowService.cs",
+              "RelativeDocumentMoniker": "libraryManagementSystem\\Services\\BorrowService.cs",
+              "ToolTip": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Services\\BorrowService.cs",
+              "RelativeToolTip": "libraryManagementSystem\\Services\\BorrowService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwD0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T22:59:02.235Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -38,7 +67,44 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookDetailsForm.cs",
+              "DocumentMoniker": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Member\\BookDetailsForm.cs",
+              "RelativeDocumentMoniker": "libraryManagementSystem\\Forms\\Member\\BookDetailsForm.cs",
+              "ToolTip": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Member\\BookDetailsForm.cs",
+              "RelativeToolTip": "libraryManagementSystem\\Forms\\Member\\BookDetailsForm.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAYwDQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T22:58:55.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookDetailsForm.cs [Design]",
+              "DocumentMoniker": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Member\\BookDetailsForm.cs",
+              "RelativeDocumentMoniker": "libraryManagementSystem\\Forms\\Member\\BookDetailsForm.cs",
+              "ToolTip": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Member\\BookDetailsForm.cs [Design]",
+              "RelativeToolTip": "libraryManagementSystem\\Forms\\Member\\BookDetailsForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T22:58:53.403Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "BorrowedBooksForm.cs [Design]",
+              "DocumentMoniker": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Member\\BorrowedBooksForm.cs",
+              "RelativeDocumentMoniker": "libraryManagementSystem\\Forms\\Member\\BorrowedBooksForm.cs",
+              "ToolTip": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Member\\BorrowedBooksForm.cs [Design]",
+              "RelativeToolTip": "libraryManagementSystem\\Forms\\Member\\BorrowedBooksForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T22:58:51.837Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ManageUsersForm.Designer.cs",
               "DocumentMoniker": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.Designer.cs",
               "RelativeDocumentMoniker": "libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.Designer.cs",
@@ -51,38 +117,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "libraryManagementSystem\\Services\\UserService.cs",
               "ToolTip": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Services\\UserService.cs",
               "RelativeToolTip": "libraryManagementSystem\\Services\\UserService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAswIgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAuwIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-15T22:19:01.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "ManageUsersForm.cs",
               "DocumentMoniker": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs",
               "RelativeDocumentMoniker": "libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs",
-              "ToolTip": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs*",
-              "RelativeToolTip": "libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs*",
-              "ViewState": "AgIAANkAAAAAAAAAAAAIwOQAAAAaAAAAAAAAAA==",
+              "ToolTip": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs",
+              "RelativeToolTip": "libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs",
+              "ViewState": "AgIAANAAAAAAAAAAAAAIwOIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-15T22:18:40.171Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ManageUsersForm.cs [Design]",
               "DocumentMoniker": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs",
               "RelativeDocumentMoniker": "libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs",
-              "ToolTip": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs [Design]*",
-              "RelativeToolTip": "libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs [Design]*",
+              "ToolTip": "D:\\ITI\\EF\u0026LINQ\\LibraryManagementSystemProject\\libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs [Design]",
+              "RelativeToolTip": "libraryManagementSystem\\Forms\\Librarian\\ManageUsersForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-15T22:18:32.418Z",
               "EditorCaption": " [Design]"

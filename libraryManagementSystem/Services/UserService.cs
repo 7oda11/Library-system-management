@@ -134,7 +134,6 @@ namespace libraryManagementSystem.Services
                         .ToList();
                 }
 
-            MessageBox.Show(CurrentUser.Role.ToString());
 
             return users;
             

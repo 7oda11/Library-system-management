@@ -58,8 +58,8 @@ namespace libraryManagementSystem.Services
                     BookId = bookId,
                     UserId = userId,
                     BorrowDate = borrowDate,
-                    //DueDate = borrowDate.AddDays(14),
-                    DueDate = borrowDate.AddSeconds(5),
+                    DueDate = borrowDate.AddDays(14),
+                    //DueDate = borrowDate.AddSeconds(5),
                     Status = BorrowStatus.Borrowed
                 };
                 User user = db.Users.Find(userId);

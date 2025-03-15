@@ -219,14 +219,13 @@ namespace libraryManagementSystem.Forms.Librarian
 
                 if (UserService.updateUser(user))
                 {
-                    //Log log = new Log()
-                    //{
-                    //    UserId = UserService.CurrentUser.UserId,
-                    //    Action = $"Admin Name {UserService.CurrentUser.Username} Updated {(UserRole)role} {userName}"
-                    //};
-                    MessageBox.Show(UserService. CurrentUser.Role.ToString());
+                    Log log = new Log()
+                    {
+                        UserId = UserService.CurrentUser.UserId,
+                        Action = $"Admin Name {UserService.CurrentUser.Username} Updated {(UserRole)role} {userName}"
+                    };
 
-                    //logService.AddLog(log);
+                    logService.AddLog(log);
 
                     MessageBox.Show("User updated successfully!");
 
