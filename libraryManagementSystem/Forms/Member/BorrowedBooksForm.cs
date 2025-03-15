@@ -85,7 +85,7 @@ namespace libraryManagementSystem.Forms.Member
             {
                 AutoSize = true,
                 Font = new Font("Arial", 10, FontStyle.Bold),
-                ForeColor = Color.Black,
+                ForeColor = Color.White,
                 Visible = false
             };
 
@@ -93,7 +93,7 @@ namespace libraryManagementSystem.Forms.Member
             {
                 Text = "Return Book",
                 Size = new Size(120, 35),
-                BackColor = Color.Green,
+                BackColor = Color.Purple,
                 ForeColor = Color.White,
                 Visible = false
             };
@@ -118,13 +118,17 @@ namespace libraryManagementSystem.Forms.Member
         {
             lblBookDetails.Text = $"Book: {selectedRecord.BookId}\n Borrowed Date: {selectedRecord.BorrowDate}\n Due Date: {selectedRecord.DueDate}";
             lblBookDetails.Visible = true;
-            lblBookDetails.Location = new Point(20, dgvBorrowedBooks.Bottom + 20);
+            lblBookDetails.Location = new Point(20, dgvBorrowedBooks.Bottom + 40);
+            lblBookDetails.BackColor = Color.FromArgb(110, 75, 125);
+            lblBookDetails.BringToFront();
 
             btnReturn.Visible = true;
-            btnReturn.Location = new Point(20, lblBookDetails.Bottom + 10);
+            btnReturn.Location = new Point(20, lblBookDetails.Bottom + 20);
+            btnReturn.BringToFront();
 
             btnCancel.Visible = true;
-            btnCancel.Location = new Point(150, lblBookDetails.Bottom + 10);
+            btnCancel.Location = new Point(150, lblBookDetails.Bottom + 20);
+            btnCancel.BringToFront();
         }
 
         private void HideReturnSection()

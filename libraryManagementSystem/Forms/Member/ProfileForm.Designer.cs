@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -38,15 +39,21 @@
             btnSave = new Button();
             btnChangePassword = new Button();
             btnCancel = new Button();
+            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(53, 23);
+            label1.BackColor = Color.FromArgb(74, 35, 90);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(279, 15);
             label1.Name = "label1";
-            label1.Size = new Size(127, 21);
+            label1.Size = new Size(154, 30);
             label1.TabIndex = 0;
             label1.Text = "Manage Profile";
             // 
@@ -54,7 +61,8 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(53, 88);
+            label2.ForeColor = Color.FromArgb(74, 35, 90);
+            label2.Location = new Point(53, 105);
             label2.Name = "label2";
             label2.Size = new Size(94, 21);
             label2.TabIndex = 1;
@@ -64,6 +72,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(74, 35, 90);
             label3.Location = new Point(53, 153);
             label3.Name = "label3";
             label3.Size = new Size(53, 21);
@@ -74,7 +83,8 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(53, 215);
+            label4.ForeColor = Color.FromArgb(74, 35, 90);
+            label4.Location = new Point(53, 202);
             label4.Name = "label4";
             label4.Size = new Size(59, 21);
             label4.TabIndex = 3;
@@ -82,63 +92,91 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(153, 90);
+            txtUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.Location = new Point(153, 102);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(100, 23);
+            txtUsername.Size = new Size(190, 29);
             txtUsername.TabIndex = 4;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(153, 151);
+            txtEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(153, 150);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(100, 23);
+            txtEmail.Size = new Size(190, 29);
             txtEmail.TabIndex = 5;
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(153, 217);
+            txtPhone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPhone.Location = new Point(153, 199);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(100, 23);
+            txtPhone.Size = new Size(190, 29);
             txtPhone.TabIndex = 6;
             // 
             // btnSave
             // 
-            btnSave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(74, 319);
+            btnSave.BackColor = Color.FromArgb(74, 35, 90);
+            btnSave.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSave.ForeColor = SystemColors.ButtonHighlight;
+            btnSave.Location = new Point(53, 319);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(173, 33);
+            btnSave.Size = new Size(189, 37);
             btnSave.TabIndex = 7;
             btnSave.Text = "Save Changes";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // btnChangePassword
             // 
-            btnChangePassword.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnChangePassword.Location = new Point(74, 258);
+            btnChangePassword.BackColor = Color.Purple;
+            btnChangePassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnChangePassword.ForeColor = SystemColors.ButtonHighlight;
+            btnChangePassword.Location = new Point(53, 258);
             btnChangePassword.Name = "btnChangePassword";
-            btnChangePassword.Size = new Size(173, 37);
+            btnChangePassword.Size = new Size(189, 37);
             btnChangePassword.TabIndex = 8;
             btnChangePassword.Text = "Change Password";
-            btnChangePassword.UseVisualStyleBackColor = true;
+            btnChangePassword.UseVisualStyleBackColor = false;
             btnChangePassword.Click += btnChangePassword_Click;
             // 
             // btnCancel
             // 
-            btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancel.Location = new Point(307, 315);
+            btnCancel.BackColor = Color.Gray;
+            btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancel.Location = new Point(681, 63);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(106, 37);
+            btnCancel.Size = new Size(114, 37);
             btnCancel.TabIndex = 9;
             btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(74, 35, 90);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(792, 54);
+            panel1.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(3, 63);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(792, 386);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
             // 
             // ProfileForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panel1);
             Controls.Add(btnCancel);
             Controls.Add(btnChangePassword);
             Controls.Add(btnSave);
@@ -148,10 +186,13 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(pictureBox1);
             Name = "ProfileForm";
             Text = "ProfileForm";
             Load += ProfileForm_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -168,5 +209,7 @@
         private Button btnSave;
         private Button btnChangePassword;
         private Button btnCancel;
+        private Panel panel1;
+        private PictureBox pictureBox1;
     }
 }

@@ -28,33 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookDetailsForm));
             btnBorrow = new Button();
             lblCategory = new Label();
             lblAuthor = new Label();
             lblTitle = new Label();
             lblQuantity = new Label();
             btnBack = new Button();
-            label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(130, 25);
-            label1.Name = "label1";
-            label1.Size = new Size(106, 21);
-            label1.TabIndex = 0;
-            label1.Text = "Book Details";
             // 
             // btnBorrow
             // 
-            btnBorrow.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBorrow.Location = new Point(112, 176);
+            btnBorrow.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBorrow.Location = new Point(519, 412);
             btnBorrow.Name = "btnBorrow";
             btnBorrow.Size = new Size(75, 36);
             btnBorrow.TabIndex = 1;
@@ -65,47 +56,47 @@
             // lblCategory
             // 
             lblCategory.AutoSize = true;
-            lblCategory.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCategory.Location = new Point(346, 79);
+            lblCategory.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCategory.Location = new Point(564, 232);
             lblCategory.Name = "lblCategory";
-            lblCategory.Size = new Size(57, 21);
+            lblCategory.Size = new Size(55, 20);
             lblCategory.TabIndex = 2;
             lblCategory.Text = "label2";
             // 
             // lblAuthor
             // 
             lblAuthor.AutoSize = true;
-            lblAuthor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAuthor.Location = new Point(130, 118);
+            lblAuthor.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAuthor.Location = new Point(537, 342);
             lblAuthor.Name = "lblAuthor";
-            lblAuthor.Size = new Size(57, 21);
+            lblAuthor.Size = new Size(55, 20);
             lblAuthor.TabIndex = 3;
             lblAuthor.Text = "label3";
             // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(130, 79);
+            lblTitle.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(501, 195);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(57, 21);
+            lblTitle.Size = new Size(55, 20);
             lblTitle.TabIndex = 4;
             lblTitle.Text = "label4";
             // 
             // lblQuantity
             // 
             lblQuantity.AutoSize = true;
-            lblQuantity.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblQuantity.Location = new Point(346, 118);
+            lblQuantity.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblQuantity.Location = new Point(564, 263);
             lblQuantity.Name = "lblQuantity";
-            lblQuantity.Size = new Size(57, 21);
+            lblQuantity.Size = new Size(53, 20);
             lblQuantity.TabIndex = 5;
             lblQuantity.Text = "label5";
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(298, 176);
+            btnBack.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBack.Location = new Point(722, 412);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(75, 36);
             btnBack.TabIndex = 6;
@@ -113,45 +104,45 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click_1;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(40, 79);
-            label2.Name = "label2";
-            label2.Size = new Size(48, 21);
-            label2.TabIndex = 7;
-            label2.Text = "Title:";
-            // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(40, 118);
+            label3.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(537, 321);
             label3.Name = "label3";
-            label3.Size = new Size(68, 21);
+            label3.Size = new Size(68, 20);
             label3.TabIndex = 8;
             label3.Text = "Author:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(256, 79);
+            label4.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(474, 232);
             label4.Name = "label4";
-            label4.Size = new Size(84, 21);
+            label4.Size = new Size(83, 20);
             label4.TabIndex = 9;
             label4.Text = "Category:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(254, 118);
+            label5.Font = new Font("Ink Free", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(477, 263);
             label5.Name = "label5";
-            label5.Size = new Size(81, 21);
+            label5.Size = new Size(80, 20);
             label5.TabIndex = 10;
             label5.Text = "Quentity:";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(793, 445);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
             // 
             // BookDetailsForm
             // 
@@ -161,32 +152,30 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(btnBack);
             Controls.Add(lblQuantity);
             Controls.Add(lblTitle);
             Controls.Add(lblAuthor);
             Controls.Add(lblCategory);
             Controls.Add(btnBorrow);
-            Controls.Add(label1);
+            Controls.Add(pictureBox1);
             Name = "BookDetailsForm";
             Text = "BookDetailsForm";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Button btnBorrow;
         private Label lblCategory;
         private Label lblAuthor;
         private Label lblTitle;
         private Label lblQuantity;
         private Button btnBack;
-        private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
+        private PictureBox pictureBox1;
     }
 }

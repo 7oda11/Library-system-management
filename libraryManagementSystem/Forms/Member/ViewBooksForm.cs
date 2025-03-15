@@ -22,6 +22,8 @@ namespace libraryManagementSystem.Forms.Member
         private void ViewBooksForm_Load(object sender, EventArgs e)
         {
             LoadBooks();
+            txtSearch.Text = "Search for a Book..";
+            txtSearch.ForeColor = Color.Gray;
         }
 
         public void LoadBooks()
@@ -82,6 +84,24 @@ namespace libraryManagementSystem.Forms.Member
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtSearch_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Search for a Book..")
+            {
+                txtSearch.Text = "";
+                txtSearch.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtSearch_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                txtSearch.Text = "Search for a Book..";
+                txtSearch.ForeColor = Color.Gray;
+            }
         }
     }
 }
