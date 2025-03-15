@@ -37,9 +37,10 @@
             // 
             // btn_logout
             // 
-            btn_logout.Location = new Point(772, 12);
+            btn_logout.Location = new Point(676, 9);
+            btn_logout.Margin = new Padding(3, 2, 3, 2);
             btn_logout.Name = "btn_logout";
-            btn_logout.Size = new Size(94, 29);
+            btn_logout.Size = new Size(82, 22);
             btn_logout.TabIndex = 0;
             btn_logout.Text = "Logout";
             btn_logout.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // 
             // btn_back
             // 
-            btn_back.Location = new Point(12, 12);
+            btn_back.Location = new Point(10, 9);
+            btn_back.Margin = new Padding(3, 2, 3, 2);
             btn_back.Name = "btn_back";
-            btn_back.Size = new Size(94, 29);
+            btn_back.Size = new Size(82, 22);
             btn_back.TabIndex = 1;
             btn_back.Text = "Back";
             btn_back.UseVisualStyleBackColor = true;
@@ -58,31 +60,34 @@
             // dgv_history
             // 
             dgv_history.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_history.Location = new Point(12, 309);
+            dgv_history.Location = new Point(10, 232);
+            dgv_history.Margin = new Padding(3, 2, 3, 2);
             dgv_history.Name = "dgv_history";
             dgv_history.RowHeadersWidth = 51;
-            dgv_history.Size = new Size(854, 188);
+            dgv_history.Size = new Size(747, 141);
             dgv_history.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(330, 149);
+            label1.Location = new Point(289, 112);
             label1.Name = "label1";
-            label1.Size = new Size(167, 20);
+            label1.Size = new Size(133, 15);
             label1.TabIndex = 3;
             label1.Text = "Borrowed Bocks History";
             // 
             // BorrowedBooksHistoryForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(878, 509);
+            ClientSize = new Size(768, 382);
             Controls.Add(label1);
             Controls.Add(dgv_history);
             Controls.Add(btn_back);
             Controls.Add(btn_logout);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "BorrowedBooksHistoryForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BorrowedBooksHistoryForm";
             Load += BorrowedBooksHistoryForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_history).EndInit();

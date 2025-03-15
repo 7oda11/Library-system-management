@@ -47,20 +47,20 @@
             btn_add = new Button();
             dvg_books = new DataGridView();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
             label7 = new Label();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
             panel3 = new Panel();
-            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)nud_quantity).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dvg_books).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txt_title
@@ -263,6 +263,18 @@
             panel1.Size = new Size(190, 532);
             panel1.TabIndex = 16;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Cursor = Cursors.Hand;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(51, 356);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(63, 52);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 15;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // pictureBox3
             // 
             pictureBox3.Cursor = Cursors.Hand;
@@ -327,18 +339,6 @@
             panel3.Size = new Size(574, 236);
             panel3.TabIndex = 18;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(51, 356);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(63, 52);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 15;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
             // ManageBooksForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -351,18 +351,19 @@
             Controls.Add(btn_add);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ManageBooksForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageBooksForm";
             Load += ManageBooksForm_Load;
             ((System.ComponentModel.ISupportInitialize)nud_quantity).EndInit();
             ((System.ComponentModel.ISupportInitialize)dvg_books).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 

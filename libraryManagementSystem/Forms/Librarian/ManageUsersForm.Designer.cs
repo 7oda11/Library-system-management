@@ -370,6 +370,7 @@
             Controls.Add(panel1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ManageUsersForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageUsersForm";
             Load += ManageUsersForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_users).EndInit();

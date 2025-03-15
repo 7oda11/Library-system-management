@@ -667,3 +667,6 @@ D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\bin\Debug\net9.0-windows\QRCoder.dll
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.BorrowedBooksHistoryForm.resources
 D:\ITI\EF&LINQ\LibraryManagementSystemProject\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Properties.Resources.resources
+D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\bin\Debug\net9.0-windows\QRCoder.dll
+D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Librarian.ManageReturnedUserBooksForm.resources
+D:\iti\linq\New folder (4)\Library-system-management\libraryManagementSystem\obj\Debug\net9.0-windows\libraryManagementSystem.Forms.Member.BorrowedBooksHistoryForm.resources

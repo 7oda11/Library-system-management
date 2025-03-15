@@ -96,5 +96,12 @@ namespace libraryManagementSystem.Forms.Librarian
             manageLibrarianChangePassword.Show();
             this.Hide();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+           AdminDashBoardForm frm = new AdminDashBoardForm();   
+           frm.Show();
+            this.Hide();
+        }
     }
 }

@@ -190,6 +190,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Name = "ChangePasswordForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ChangePasswordForm";
             Load += ChangePasswordForm_Load;
             panel1.ResumeLayout(false);
