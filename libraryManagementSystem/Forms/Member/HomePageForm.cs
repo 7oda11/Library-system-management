@@ -1,4 +1,5 @@
-﻿using System;
+﻿using libraryManagementSystem.Forms.CommonFroms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +38,9 @@ namespace libraryManagementSystem.Forms.Member
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ManageLoginForm manageLoginForm = new ManageLoginForm();
+            manageLoginForm.Show();
+            this.Hide();
         }
 
         private void btn_BorrowedBooksHistory_Click(object sender, EventArgs e)

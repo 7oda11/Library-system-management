@@ -23,6 +23,10 @@ namespace libraryManagementSystem.Forms.Librarian
         private void ManageBooksForm_Load(object sender, EventArgs e)
         {
             loadData();
+            btn_adding.Show();
+            btn_update.Hide();
+            btn_delete.Hide();
+
 
         }
         private void loadData()
@@ -126,6 +130,9 @@ namespace libraryManagementSystem.Forms.Librarian
                 nud_quantity.Value = Convert.ToInt32(row.Cells["Quantity"].Value);
                 cb_category.SelectedValue = row.Cells["CategoryId"].Value;
                 selectedBookId = Convert.ToInt32(row.Cells["BookId"].Value);
+                btn_adding.Hide();
+                btn_delete.Show();
+                btn_update.Show();
             }
         }
 
@@ -192,21 +199,21 @@ namespace libraryManagementSystem.Forms.Librarian
                     {
                         if (BookService.deleteBook(selectedBookId))
                         {
-                            MessageBox.Show("Book deleted successfully!",               "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Log log = new Log()
-                        {
-                            UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
-                            Action = $"Admin Name {UserService.CurrentUser.Username} Delete Book {txt_title.Text}"
-                        };
-                        logService.AddLog(log);
-                        ClearInputs();
+                            MessageBox.Show("Book deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Log log = new Log()
+                            {
+                                UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
+                                Action = $"Admin Name {UserService.CurrentUser.Username} Delete Book {txt_title.Text}"
+                            };
+                            logService.AddLog(log);
+                            ClearInputs();
                             loadData();
 
 
                         }
 
 
-                    
+
                     }
 
 
@@ -218,11 +225,6 @@ namespace libraryManagementSystem.Forms.Librarian
                 }
 
             }
-        }
-
-        private void dvg_books_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -237,6 +239,36 @@ namespace libraryManagementSystem.Forms.Librarian
             ManageLoginForm frm = new ManageLoginForm();
             frm.Show();
             this.Hide();
+        }
+
+        private void btn_adding_Click(object sender, EventArgs e)
+        {
+            if (ValidateInputs())
+            {
+                Book newBook = new Book()
+                {
+                    Title = txt_title.Text.Trim(),
+                    Author = txt_auther.Text.Trim(),
+                    ISBN = txt_isbn.Text.Trim(),
+                    PublishedYear = dt_publishedYear.Value.Year,
+                    Quantity = (int)nud_quantity.Value,
+                    CategoryId = Convert.ToInt32(cb_category.SelectedValue),
+                    CreatedAt = DateTime.Now
+                };
+                if (BookService.addBook(newBook))
+                {
+                    MessageBox.Show("Book added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Log log = new Log()
+                    {
+                        UserId = UserService.CurrentUser.UserId,  // Ensure CurrentUser is properly set
+                        Action = $"Admin Name {UserService.CurrentUser.Username} Add Book {txt_title.Text}"
+                    };
+                    logService.AddLog(log);
+                    ClearInputs();
+                    loadData();
+                }
+
+            }
         }
     }
 }

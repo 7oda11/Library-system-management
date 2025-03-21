@@ -66,6 +66,7 @@ namespace libraryManagementSystem.Forms.Librarian
         {
             ManageLoginForm frm = new ManageLoginForm();
             frm.Show();
+            this.Hide();
         }
         private void btn_returnedBooks_Click(object sender, EventArgs e)
         {

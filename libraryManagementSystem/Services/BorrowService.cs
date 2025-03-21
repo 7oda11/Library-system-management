@@ -33,7 +33,7 @@ namespace libraryManagementSystem.Services
         }
         public static List<BorrowingRecord> BorrowedHistory()
         {
-            return dbContext.BorrowingRecords.ToList();
+            return dbContext.BorrowingRecords.Where(b=>b.UserId==UserService.CurrentUser.UserId).ToList();
         }
 
         public static List<BorrowingRecord> searchBorrowingRecord(string userName)
